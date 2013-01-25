@@ -4,14 +4,14 @@ describe "Static pages" do
 
   describe "Home page" do
 
-    it "should have h1 'Invest-Globe'" do
+    it "should have h1 'ZWB'" do
       visit '/static_pages/home'
-      page.should have_selector('h1', :text => 'Invest-Globe')
+      page.should have_selector('h1', :text => 'ZWB')
     end
 
-    it "should have title 'Invest-Globe | Home' " do
+    it "should have title 'ZWB | Home' " do
       visit '/static_pages/home'	
-      page.should have_selector('title', :text => "Invest-Globe | Home")
+      page.should have_selector('title', :text => "ZWB | Home")
     end
   end
 
@@ -24,7 +24,7 @@ describe "Static pages" do
 
     it "shoul have title 'Help'" do
       visit '/static_pages/help'
-      page.should have_selector('title', :text => 'Invest-Globe | Help')
+      page.should have_selector('title', :text => 'ZWB | Help')
     end
   end
 
@@ -37,7 +37,7 @@ describe "Static pages" do
 
     it "should have title 'Invest-Globe | About Us'" do
       visit '/static_pages/about'
-      page.should have_selector('title', :text => 'Invest-Globe | About Us')
+      page.should have_selector('title', :text => 'ZWB | About Us')
     end
   end
 
@@ -50,7 +50,7 @@ describe "Static pages" do
 
     it "should have title" do
       visit '/static_pages/contact'
-      page.should have_selector('title', :text => 'Invest-Globe | Contact Us')
+      page.should have_selector('title', :text => 'ZWB | Contact Us')
     end
   end
 end
