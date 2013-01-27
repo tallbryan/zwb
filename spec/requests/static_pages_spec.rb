@@ -2,6 +2,24 @@ require 'spec_helper'
 
 describe "Static pages" do
 
+  describe "Application page" do  
+
+    it "should have link 'Home' " do
+      visit '/static_pages/home'  
+      page.should have_link("Sign in", :href => '#')
+    end
+
+    it "should have link 'Help' " do
+      visit '/static_pages/home'  
+      page.should have_link("Help", :href => '#')
+    end
+
+    it "should have link 'Sign in' " do
+      visit '/static_pages/home'  
+      page.should have_link("Sign in", :href => '#')
+    end  
+  end 
+
   describe "Home page" do
 
     it "should have h1 'ZWB'" do
@@ -12,6 +30,11 @@ describe "Static pages" do
     it "should have title 'ZWB | Home' " do
       visit '/static_pages/home'	
       page.should have_selector('title', :text => "ZWB | Home")
+    end
+
+    it "shoul have link 'Sign up'" do
+      visit '/static_pages/home'
+      page.should have_link("Sign up", :href => '#')
     end
   end
 
