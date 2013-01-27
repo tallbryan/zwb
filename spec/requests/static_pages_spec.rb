@@ -6,7 +6,7 @@ describe "Static pages" do
 
     it "should have link 'Home' " do
       visit '/static_pages/home'  
-      page.should have_link("Sign in", :href => '#')
+      page.should have_link("Home", :href => '#')
     end
 
     it "should have link 'Help' " do
@@ -14,9 +14,9 @@ describe "Static pages" do
       page.should have_link("Help", :href => '#')
     end
 
-    it "should have link 'Sign in' " do
+    it "should have link 'Sign up' " do
       visit '/static_pages/home'  
-      page.should have_link("Sign in", :href => '#')
+      page.should have_link("Sign up", :href => '#')
     end  
   end 
 
@@ -30,11 +30,6 @@ describe "Static pages" do
     it "should have title 'ZWB | Home' " do
       visit '/static_pages/home'	
       page.should have_selector('title', :text => "ZWB | Home")
-    end
-
-    it "shoul have link 'Sign up'" do
-      visit '/static_pages/home'
-      page.should have_link("Sign up", :href => '#')
     end
   end
 
