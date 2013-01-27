@@ -2,24 +2,6 @@ require 'spec_helper'
 
 describe "Static pages" do
 
-  describe "Application page" do  
-
-    it "should have link 'Home' " do
-      visit root_path  
-      page.should have_link("Home", :href => '#')
-    end
-
-    it "should have link 'Help' " do
-      visit help_path  
-      page.should have_link("Help", :href => '#')
-    end
-
-    it "should have link 'Sign up' " do
-      visit root_path  
-      page.should have_link("Sign up", :href => '#')
-    end  
-  end 
-
   describe "Home page" do
 
     it "should have h1 'ZWB'" do
