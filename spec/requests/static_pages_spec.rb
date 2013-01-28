@@ -8,7 +8,8 @@ describe "Static pages" do
     before { visit root_path }
 
     it { should have_selector('h1', text:'ZWB') }
-    it { should have_selector('title', text: "ZWB | Home") }
+    it { should have_selector('title', text: "ZWB") }
+    it { should_not have_selector('title', :text => '| Home')} 
   end
 
   describe "Help page" do
