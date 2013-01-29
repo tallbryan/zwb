@@ -28,7 +28,7 @@ gem 'jquery-rails'
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
-# Use unicorn as the app server
+# Use unicorn as t he app server
 # gem 'unicorn'
 
 # Deploy with Capistrano
@@ -46,4 +46,5 @@ group :test do
   gem 'cucumber-rails', :require => false
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
+  gem 'factory_girl', '2.6.4'
 end
