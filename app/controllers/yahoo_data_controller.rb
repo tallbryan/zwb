@@ -10,15 +10,15 @@ YahooFinance::STDHASH = {
 
 class YahooDataController < ApplicationController
  
- def new 
+ def new_yahoo_datum 
  end 
  
- def index
+ def yahoo_data
  end
 
- def get_current_stock_data
+ def edit_yahoo_datum
  	 quote_type = YahooFinance::StandardQuote
-     quote_symbols = "MSFT"
+     quote_symbols = "MSFT", "AMD"
 
      YahooFinance::get_quotes( quote_type, quote_symbols ) do |qt|
 	 puts "QUOTING #{qt.symbol}"
@@ -28,11 +28,7 @@ class YahooDataController < ApplicationController
  	
  end
 
-def create 
-end
+ def yahoo_datum
+ end
 
-def show
-end
-
-
-end
+ end
