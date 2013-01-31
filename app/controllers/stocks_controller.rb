@@ -8,15 +8,15 @@ YahooFinance::STDHASH = {
 	"y" => [ "dividendYield", "convert(val)"]
 }
 
-class YahooDataController < ApplicationController
- 
- def new_yahoo_datum 
+
+class StocksController < ApplicationController
+
+ def new
+ 	puts params
+ 	@stock = Stock.new
  end 
  
- def yahoo_data
- end
-
- def edit_yahoo_datum
+ def edit
  	 quote_type = YahooFinance::StandardQuote
      quote_symbols = "MSFT", "AMD"
 
@@ -28,7 +28,21 @@ class YahooDataController < ApplicationController
  	
  end
 
- def yahoo_datum
+ def create
+  puts params
+  @stock = Stock.new(params[:stock])
+   
+  if @stock.save
+   flash[:notice] = "Stock has been added."
+   redirect_to @stock
+  else
+   # nothing, yet
+  end
  end
 
+ def show
+  @stock = Stock.find(params[:id])
  end
+
+
+end

@@ -1,10 +1,10 @@
 wsugg@wsugg-Ubuntu:~/zwb$ rake routes
 
-      yahoo_data GET    /yahoo_data(.:format)          yahoo_data#index
-                 POST   /yahoo_data(.:format)          yahoo_data#create
- new_yahoo_datum GET    /yahoo_data/new(.:format)      yahoo_data#new
-edit_yahoo_datum GET    /yahoo_data/:id/edit(.:format) yahoo_data#edit
-     yahoo_datum GET    /yahoo_data/:id(.:format)      yahoo_data#show
-                 PUT    /yahoo_data/:id(.:format)      yahoo_data#update
-                 DELETE /yahoo_data/:id(.:format)      yahoo_data#destroy
-            root        /                              yahoo_data#index
+      stocks GET    /stocks(.:format)          stocks#index
+           POST   /stocks(.:format)          stocks#create
+ new_stock GET    /stocks/new(.:format)      stocks#new
+edit_stock GET    /stocks/:id/edit(.:format) stocks#edit
+     stock GET    /stocks/:id(.:format)      stocks#show
+           PUT    /stocks/:id(.:format)      stocks#update
+           DELETE /stocks/:id(.:format)      stocks#destroy
+      root        /                          stocks#index

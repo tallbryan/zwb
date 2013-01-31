@@ -12,7 +12,7 @@ Zwb::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-  resources :yahoo_data
+  resources :stocks
 
 
   # Sample resource route with options:
@@ -50,7 +50,7 @@ Zwb::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'yahoo_data#index'
+   root :to => 'stocks#index'
 
   # See how all your routes lay out with "rake routes"
 

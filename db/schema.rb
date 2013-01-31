@@ -11,14 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130131055753) do
+ActiveRecord::Schema.define(:version => 20130131102315) do
 
-  create_table "yahoo_data", :force => true do |t|
+  create_table "stocks", :force => true do |t|
     t.string   "name"
-    t.string   "stocksym"
+    t.string   "symbol"
     t.float    "price"
     t.float    "pe"
-    t.float    "divyield"
+    t.float    "div"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
