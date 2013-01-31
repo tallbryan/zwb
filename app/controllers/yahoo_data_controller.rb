@@ -1,4 +1,4 @@
-require 'yahoofincance'
+require 'yahoofinance'
 
 YahooFinance::STDHASH = {
 	"s" => [ "symbol", "val"],
