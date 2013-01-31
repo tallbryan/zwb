@@ -31,7 +31,7 @@ class StocksController < ApplicationController
  def create
   puts params
   @stock = Stock.new(params[:stock])
-   
+  
   if @stock.save
    flash[:notice] = "Stock has been added."
    redirect_to @stock
@@ -41,6 +41,7 @@ class StocksController < ApplicationController
  end
 
  def show
+  puts params
   @stock = Stock.find(params[:id])
  end
 
