@@ -26,6 +26,7 @@ class StocksController < ApplicationController
   puts params
   @stock = Stock.find(params[:id])
  	
+=begin
   quote_type = YahooFinance::StandardQuote
   quote_symbols = @stock.symbol
 
@@ -34,7 +35,17 @@ class StocksController < ApplicationController
 	puts qt.to_s
 	@qt = qt
   end
+=end
+
  end
+
+ def update
+  @stock = Stock.find(params[:id])
+  @stock.update_attributes(params[:stock])
+  flash[:notice] = "Stock has been updated."
+  redirect_to @stock
+end
+
 
  def create
   puts params
