@@ -1,4 +1,13 @@
-<h2>Add or Update Current Stock Data</h2>
+<h2>Current Stock Data</h2>
+
+<ul>
+<% @stocks.each do |stock| %>
+<li><%= stock.symbol%> <%= stock.price%> <%= stock.pe%> <%= stock.div%> 
+	<%= link_to stock.name, stock%></li>
+<% end %>
+</ul>
+
+
 <%= link_to "List all Stocks", stocks_path %>
 <%= link_to "New Stock", new_stock_path %>
 <%= link_to "Update Stocks", stocks_path %>

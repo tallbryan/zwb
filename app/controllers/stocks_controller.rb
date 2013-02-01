@@ -11,6 +11,12 @@ YahooFinance::STDHASH = {
 
 class StocksController < ApplicationController
 
+ def index
+  puts params
+  @stocks = Stock.all
+ end
+
+
  def new
  	puts params
  	@stock = Stock.new
@@ -21,7 +27,7 @@ class StocksController < ApplicationController
   @stock = Stock.find(params[:id])
  	
   quote_type = YahooFinance::StandardQuote
-  quote_symbols = @stock.name
+  quote_symbols = @stock.symbol
 
   YahooFinance::get_quotes( quote_type, quote_symbols ) do |qt|
 	puts "QUOTING #{qt.symbol}"
