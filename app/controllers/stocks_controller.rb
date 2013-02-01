@@ -41,9 +41,13 @@ class StocksController < ApplicationController
 
  def update
   @stock = Stock.find(params[:id])
-  @stock.update_attributes(params[:stock])
-  flash[:notice] = "Stock has been updated."
-  redirect_to @stock
+  if @stock.update_attributes(params[:stock])
+   flash[:notice] = "Stock has been updated."
+   redirect_to @stock
+  else
+   flash[:alert] = "Stock has not been updated."
+   render :action => "edit"
+  end
 end
 
 
@@ -63,5 +67,12 @@ end
  def show
   puts params
   @stock = Stock.find(params[:id])
+ end
+
+ def destroy
+  @stock = Stock.find(params[:id])
+  @stock.destroy
+  flash[:notice] = "Stock has been deleted."
+  redirect_to stocks_path
  end
 end
