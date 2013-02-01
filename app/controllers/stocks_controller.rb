@@ -17,26 +17,29 @@ class StocksController < ApplicationController
  end 
  
  def edit
- 	 quote_type = YahooFinance::StandardQuote
-     quote_symbols = "MSFT", "AMD"
-
-     YahooFinance::get_quotes( quote_type, quote_symbols ) do |qt|
-	 puts "QUOTING #{qt.symbol}"
-	 puts qt.to_s
-	 @qt = qt
-    end
+  puts params
+  @stock = Stock.find(params[:id])
  	
+  quote_type = YahooFinance::StandardQuote
+  quote_symbols = @stock.name
+
+  YahooFinance::get_quotes( quote_type, quote_symbols ) do |qt|
+	puts "QUOTING #{qt.symbol}"
+	puts qt.to_s
+	@qt = qt
+  end
  end
 
  def create
   puts params
   @stock = Stock.new(params[:stock])
-  
+
   if @stock.save
-   flash[:notice] = "Stock has been added."
+   flash[:notice] = "Your Stock has been added."
    redirect_to @stock
   else
-   # nothing, yet
+   flash[:alert] = "Your Stock has not been Added."
+   render :action => "new"
   end
  end
 
@@ -44,6 +47,4 @@ class StocksController < ApplicationController
   puts params
   @stock = Stock.find(params[:id])
  end
-
-
 end
