@@ -8,14 +8,14 @@ YahooFinance::STDHASH = {
 	"y" => [ "dividendYield", "convert(val)"]
 }
 
-
 class StocksController < ApplicationController
+
+ before_filter :find_stock, :only => [:show, :edit, :update, :destroy]
 
  def index
   puts params
   @stocks = Stock.all
  end
-
 
  def new
  	puts params
@@ -36,7 +36,6 @@ class StocksController < ApplicationController
 	@qt = qt
   end
 =end
-
  end
 
  def update
@@ -48,7 +47,7 @@ class StocksController < ApplicationController
    flash[:alert] = "Stock has not been updated."
    render :action => "edit"
   end
-end
+ end
 
 
  def create
@@ -75,4 +74,12 @@ end
   flash[:notice] = "Stock has been deleted."
   redirect_to stocks_path
  end
+
+ private
+  def find_stock
+    @stock = Stock.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+    flash[:alert] = "The stock you were looking for could not be found."
+    redirect_to stocks_path
+  end
 end
