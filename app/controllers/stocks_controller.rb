@@ -13,29 +13,44 @@ class StocksController < ApplicationController
  before_filter :find_stock, :only => [:show, :edit, :update, :destroy]
 
  def index
-  puts params
+  flash[:notice] = "#{params}"
   @stocks = Stock.all
+  
+  if params[:format] == "update_all"
+     @qt = []
+     quote_type = YahooFinance::StandardQuote
+     quote_symbols = []
+     @stocks = Stock.all
+     puts "#{@stocks}"
+     @stocks.each{|s| quote_symbols << s.symbol}
+     flash[:notice] =  "#{quote_symbols}"
+
+     YahooFinance::get_quotes( quote_type, quote_symbols ) do |qt|
+     qt.to_s
+     @stocks.each{|s| if s.symbol == qt.symbol then 
+                        s.price = qt.lastTrade; 
+                        s.pe = qt.peRatio; 
+                        s.div = qt.dividendYield;
+                        stock = Stock.find(s.id);
+                        if stock.update_attributes(:price => s.price, :pe => s.pe, :div => s.div )
+                          flash[:notice] = "Will, your Stock has been updated."
+                        else
+                          flash[:alert] = "Will, your Stock has not been updated."
+                          redirect_to @stock
+                        end
+                      end}
+     end
+  end
  end
 
  def new
- 	puts params
+ 	flash[:notice] = "#{params}"
  	@stock = Stock.new
  end 
  
  def edit
-  puts params
+  flash[:notice] = "#{params}"
   @stock = Stock.find(params[:id])
- 	
-=begin
-  quote_type = YahooFinance::StandardQuote
-  quote_symbols = @stock.symbol
-
-  YahooFinance::get_quotes( quote_type, quote_symbols ) do |qt|
-	puts "QUOTING #{qt.symbol}"
-	puts qt.to_s
-	@qt = qt
-  end
-=end
  end
 
  def update
@@ -51,7 +66,7 @@ class StocksController < ApplicationController
 
 
  def create
-  puts params
+  flash[:notice] = "#{params}"
   @stock = Stock.new(params[:stock])
 
   if @stock.save
@@ -64,11 +79,12 @@ class StocksController < ApplicationController
  end
 
  def show
-  puts params
+  flash[:notice] = "#{params}"
   @stock = Stock.find(params[:id])
  end
 
  def destroy
+  flash[:notice] = "#{params}"
   @stock = Stock.find(params[:id])
   @stock.destroy
   flash[:notice] = "Stock has been deleted."

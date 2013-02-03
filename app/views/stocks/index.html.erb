@@ -1,9 +1,11 @@
 <h2>Current Stock Data</h2>
 
 <table>
-<tr><h2><td width="100">Symbol</td><td width="100">Price</td><td width="100">PE</td><td width="100">Div</td><td width="100">Name</td></h2></tr>
+<tr><td width="100"><b>Name</td><td width="100"><b>Symbol</td><td width="100"><b>Price</td><td width="100"><b>PE</td><td width="100"><b>Div</td></tr>
+
 <% @stocks.each do |stock| %>
-<tr><td><%= stock.symbol%></td><td><%= stock.price%></td><td><%= stock.pe%></td><td><%= stock.div%> </td><td><%= link_to stock.name, stock%></td></tr>
+
+<tr><td><%= link_to stock.name, stock%></td><td><%= stock.symbol%></td><td><%= stock.price%></td><td><%=stock.pe%></td><td><%= stock.div%> </td></tr>
 <% end %>
 </table>
 
@@ -11,6 +13,6 @@
 </p>	
 
 <%= link_to "New Stock", new_stock_path %>
-<%= link_to "Update All Stocks", stocks_path %>
+<%= link_to "Update All Stocks", stocks_path(:update_all) %>
 
 
