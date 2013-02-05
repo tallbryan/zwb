@@ -31,12 +31,11 @@ class StocksController < ApplicationController
            flash[:notice] = "Will, your Stock has been updated."
           else
            flash[:alert] = "Will, your Stock has not been updated."
-           redirect_to @stock
           end
          end
-       end     
+       end  
      end
-
+     redirect_to stocks_path
   end
  end
 
