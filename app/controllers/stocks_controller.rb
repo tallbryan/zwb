@@ -17,29 +17,26 @@ class StocksController < ApplicationController
   @stocks = Stock.all
   
   if params[:format] == "update_all"
-     @qt = []
      quote_type = YahooFinance::StandardQuote
      quote_symbols = []
-     @stocks = Stock.all
-     puts "#{@stocks}"
+     
      @stocks.each{|s| quote_symbols << s.symbol}
-     flash[:notice] =  "#{quote_symbols}"
 
      YahooFinance::get_quotes( quote_type, quote_symbols ) do |qt|
-     qt.to_s
-     @stocks.each{|s| if s.symbol == qt.symbol then 
-                        s.price = qt.lastTrade; 
-                        s.pe = qt.peRatio; 
-                        s.div = qt.dividendYield;
-                        stock = Stock.find(s.id);
-                        if stock.update_attributes(:price => s.price, :pe => s.pe, :div => s.div )
-                          flash[:notice] = "Will, your Stock has been updated."
-                        else
-                          flash[:alert] = "Will, your Stock has not been updated."
-                          redirect_to @stock
-                        end
-                      end}
+       qt.to_s
+       @stocks.each do |s|  
+         if s.symbol.upcase == qt.symbol.upcase then 
+         stock = Stock.find(s.id)
+          if stock.update_attributes(:price => qt.lastTrade, :pe => qt.peRatio, :div => qt.dividendYield )
+           flash[:notice] = "Will, your Stock has been updated."
+          else
+           flash[:alert] = "Will, your Stock has not been updated."
+           redirect_to @stock
+          end
+         end
+       end     
      end
+
   end
  end
 
