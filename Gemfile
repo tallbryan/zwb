@@ -37,7 +37,7 @@ gem 'jquery-rails'
 gem 'yahoofinance', '1.2.2'
 
 group :development, :test do
-  gem 'rspec-rails', '~> 2.11'
+  gem 'rspec-rails'
 end
 
 group :test do
