@@ -1,0 +1,36 @@
+<%= form_for [@stock, @earning] do |f| %> 
+ <%= f.error_messages %>
+
+<table>
+<tr><td width="100"><b>Year</td><td width="100"><b>Earnings</td><td width="100"><b>PE</td><td width="100"><b>Div.</td><td width="100"><b>SH EQ</td></tr>
+
+<% 10.times do |row| %>
+
+<tr>
+  <td>
+    <%= f.label :year %><br/>
+    <%= f.text_field :year %>
+  </td>
+  <td>
+  	<%= f.label :earnings %><br/>
+    <%= f.text_field :earnings %>
+  </td> 
+  <td>
+  	<%= f.label :pe %><br/>
+    <%= f.text_field :pe %>
+  </td>
+  <td>
+    <%= f.label :div %><br/>
+    <%= f.text_field :div %>
+  </td>
+  <td>
+   <%= f.label :sheq %><br/>
+   <%= f.text_area :sheq %>
+  </td>
+</tr>
+<% end %>
+</table>
+  
+ </p>
+ <%= f.submit %>
+<% end %>

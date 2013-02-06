@@ -33,9 +33,9 @@ class StocksController < ApplicationController
            flash[:alert] = "Will, your Stock has not been updated."
           end
          end
-       end  
+       end 
      end
-     redirect_to stocks_path
+     #redirect_to stocks_path 
   end
  end
 
