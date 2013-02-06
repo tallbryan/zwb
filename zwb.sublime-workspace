@@ -155,7 +155,7 @@
 			"file": "config/routes.rb",
 			"settings":
 			{
-				"buffer_size": 1798,
+				"buffer_size": 1970,
 				"line_ending": "Unix"
 			}
 		},
@@ -243,7 +243,7 @@
 			"file": "app/controllers/stocks_controller.rb",
 			"settings":
 			{
-				"buffer_size": 2260,
+				"buffer_size": 2261,
 				"line_ending": "Unix"
 			}
 		},
@@ -515,7 +515,7 @@
 	"groups":
 	[
 		{
-			"selected": 13,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -577,15 +577,15 @@
 					"file": "config/routes.rb",
 					"settings":
 					{
-						"buffer_size": 1798,
+						"buffer_size": 1970,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								562,
-								562
+								512,
+								512
 							]
 						],
 						"settings":
@@ -666,8 +666,8 @@
 						"selection":
 						[
 							[
-								155,
-								155
+								205,
+								205
 							]
 						],
 						"settings":
@@ -871,15 +871,15 @@
 					"file": "app/controllers/stocks_controller.rb",
 					"settings":
 					{
-						"buffer_size": 2260,
+						"buffer_size": 2261,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								570,
-								570
+								1079,
+								1079
 							]
 						],
 						"settings":
@@ -889,7 +889,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 85.0,
+						"translation.y": 272.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1100,7 +1100,9 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
