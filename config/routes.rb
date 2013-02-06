@@ -1,14 +1,9 @@
 Zwb::Application.routes.draw do
-  root              :to => 'static_pages#home'
-  match '/help',    to: 'static_pages#help'
-  match '/about',   to: 'static_pages#about'
-  match '/contact', to: 'static_pages#contact'
-
-  # The priority is based upon order of creation:
+    # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
+     
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
@@ -17,6 +12,9 @@ Zwb::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+  resources :stocks do
+    resources :earnings
+  end
 
   # Sample resource route with options:
   #   resources :products do
@@ -53,7 +51,7 @@ Zwb::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+   root :to => 'stocks#index'
 
   # See how all your routes lay out with "rake routes"
 

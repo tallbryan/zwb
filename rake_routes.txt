@@ -1,0 +1,10 @@
+wsugg@wsugg-Ubuntu:~/zwb$ rake routes
+
+      stocks GET    /stocks(.:format)        stocks#index
+           POST   /stocks(.:format)          stocks#create
+ new_stock GET    /stocks/new(.:format)      stocks#new
+edit_stock GET    /stocks/:id/edit(.:format) stocks#edit
+     stock GET    /stocks/:id(.:format)      stocks#show
+           PUT    /stocks/:id(.:format)      stocks#update
+           DELETE /stocks/:id(.:format)      stocks#destroy
+      root        /                          stocks#index
