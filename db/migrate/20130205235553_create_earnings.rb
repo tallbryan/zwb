@@ -1,7 +1,7 @@
 class CreateEarnings < ActiveRecord::Migration
   def change
     create_table :earnings do |t|
-      t.integar :year
+      t.integer :year
       t.float :pe
       t.float :div
       t.float :sheq
