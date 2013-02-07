@@ -11,10 +11,10 @@ class EarningsController < ApplicationController
   	#binding.pry
   	@earning = @stock.earnings.build(params[:earning])
   	 if @earning.save
-  	  flash[:notice] = "Earnings Saved"
+  	  flash[:notice] = "Earnings Saved."
   	  redirect_to [@stock, @earning]
   	 else
-  	 	flash[:notice] = "Earnings not Saved"
+  	 	flash[:notice] = "Earnings not Saved."
   	 	render :action => "new"
   	 end
   end
