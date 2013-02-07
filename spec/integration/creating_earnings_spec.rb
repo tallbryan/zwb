@@ -21,6 +21,12 @@ scenario "can create new earnings page for a stock" do
 scenario "can add new earnings to db for a stock" do
 	click_link "Add Earnings"
 	page.should have_content('10 yrs. Earnings')
+	fill_in 'earning_year', :with => '2002'
+    fill_in 'earning_earnings', :with => '2.50'
+    fill_in 'earning_sheq', :with => '200'
+    fill_in 'earning_pe', :with => '120'
+    fill_in 'earning_div', :with => '2.23'
  	click_button "Create Earning"	
+ 	page.should have_content('Earnings Saved')
  end
 end
