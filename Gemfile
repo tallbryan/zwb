@@ -41,6 +41,8 @@ gem 'yahoofinance', '1.2.2'
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'pry-rails'
+  gem 'hirb'
 end
 
 group :test do

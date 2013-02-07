@@ -39,6 +39,7 @@ GEM
       xpath (~> 0.1.4)
     childprocess (0.3.7)
       ffi (~> 1.0, >= 1.0.6)
+    coderay (1.0.8)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -67,6 +68,7 @@ GEM
     gherkin (2.11.5)
       json (>= 1.4.6)
     hike (1.2.1)
+    hirb (0.7.1)
     i18n (0.6.1)
     journey (1.0.4)
     jquery-rails (2.1.4)
@@ -78,10 +80,17 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    method_source (0.8.1)
     mime-types (1.19)
     multi_json (1.5.0)
     nokogiri (1.5.6)
     polyglot (0.3.3)
+    pry (0.9.11.4)
+      coderay (~> 1.0.5)
+      method_source (~> 0.8)
+      slop (~> 3.4)
+    pry-rails (0.2.2)
+      pry (>= 0.9.10)
     rack (1.4.4)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -130,6 +139,7 @@ GEM
       multi_json (~> 1.0)
       rubyzip
       websocket (~> 1.0.4)
+    slop (3.4.3)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -163,7 +173,9 @@ DEPENDENCIES
   database_cleaner
   dynamic_form (= 1.1.4)
   factory_girl (= 2.6.4)
+  hirb
   jquery-rails
+  pry-rails
   rails (= 3.2.11)
   rspec-rails
   sass-rails (~> 3.2.3)

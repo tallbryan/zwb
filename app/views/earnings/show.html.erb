@@ -1,0 +1,9 @@
+<div id='earning'>
+	
+ <h2><%= @stock.name %></h2>
+ <%= render "form" %>
+ <%= link_to "Edit Earnings", [:edit, @stock, @earning] %>
+ <%= link_to "Delete Earnings", [@stock, @earning], :method => :delete,
+          :confirm => "Are you sure you want to delete the earnings?" %>
+ 
+</div>
