@@ -8,7 +8,6 @@ class EarningsController < ApplicationController
   end
 
   def create
-  	#binding.pry
   	@earning = @stock.earnings.build(params[:earning])
   	 if @earning.save
   	  flash[:notice] = "Earnings Saved."
@@ -20,12 +19,16 @@ class EarningsController < ApplicationController
   end
 
   def update
-  	#binding.pry
+  	if @earning.update_attributes(params[:earning])
+    flash[:notice] = "Earnings have been updated."
+    redirect_to [@stock, @earning]
+   else
+    flash[:alert] = "Earnings have not been updated."
+    render :action => "edit"
+   end
   end
 
   def edit
-  	#binding.pry
-
   end
   
   def show

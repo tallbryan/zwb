@@ -29,10 +29,8 @@ scenario "can edit earnings for a stock" do
     fill_in 'earning_sheq', :with => '200'
     fill_in 'earning_pe', :with => '120'
     fill_in 'earning_div', :with => '2.23'
-    binding.pry
  	click_button "Update Earning"
- 	page.should have_content('Edited Earnings')
-
+ 	page.should have_content('Earnings have been updated.')
  end
 
 =begin
