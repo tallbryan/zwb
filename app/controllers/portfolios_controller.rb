@@ -6,8 +6,7 @@ class PortfoliosController < ApplicationController
   def create
     @portfolio = Portfolio.new (params[:portfolio])
     if @portfolio.save
-      flash[:notice] = "Portfolio has been created"
-      flash[:notice] = "#{@portfolio.name}"
+      flash[:notice] = "Your portfolio has been created'"
       redirect_to @portfolio
     else
       #nothing, yet
