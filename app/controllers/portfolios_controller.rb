@@ -13,4 +13,8 @@ class PortfoliosController < ApplicationController
       #nothing, yet
     end
   end
+  
+  def show
+    @portfolio = Portfolio.find(params[:id])
+  end
 end
