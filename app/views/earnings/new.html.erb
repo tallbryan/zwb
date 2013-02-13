@@ -1,2 +1,33 @@
-<h2>10 yrs. Earnings</h2>
-<%= render "form" %>
+<h2><%= @stock.symbol %> New 10 yrs. Earnings</h2>
+
+<table>
+<tr>
+  <td><b>Year</td>
+  <td><b>Earnings</td>
+  <td><b>PE</td>
+  <td><b>Div.</td>
+  <td><b>SH EQ</td>
+</tr>
+ <%= form_for [@stock, @earning] do |f| %> 
+  <%= f.error_messages %>
+<tr>
+  <td>
+    <%= f.text_field :year, :value => @earning.year, :size => 5 %>
+  </td>
+  <td>
+    <%= f.text_field :earnings, :value => @earning.earnings, :size => 5 %>
+  </td> 
+  <td>
+    <%= f.text_field :pe, :value => @earning.pe, :size => 5 %>
+  </td>
+  <td>
+    <%= f.text_field :div, :value => @earning.div, :size => 5 %>
+  </td>
+  <td>
+   <%= f.text_field :sheq, :value => @earning.sheq, :size => 5 %>
+  </td>
+</tr>
+ <%= f.submit %>
+</table>
+<% end %>
+<%= link_to "Cancel", stocks_path %>

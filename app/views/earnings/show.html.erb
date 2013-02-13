@@ -1,9 +1,42 @@
 <div id='earning'>
-	
- <h2><%= @stock.name %></h2>
- <%= render "form" %>
- <%= link_to "Edit Earnings", [:edit, @stock, @earning] %>
- <%= link_to "Delete Earnings", [@stock, @earning], :method => :delete,
-          :confirm => "Are you sure you want to delete the earnings?" %>
- 
+ <h2>SHOW Earnings for:</br></h2>
+<table>
+<tr><td><b>Year</td><td><b>Earnings</td><td><b>PE</td><td><b>Div.</td><td ><b>SH EQ</td></tr>
+
+<%= form_for [@stock, @earning] do |f| %>
+	<%= f.error_messages %>
+
+ <%= fields_for @stock.earnings.each do |earning| %> 
+  <td>
+  	<%# binding.pry %>
+    <%= @earning.year %>
+  </td>
+   <td>
+    <%= stock.earnings.text_field :year, :value => earning.year, :size => 5 %>
+  </td>
+  <td>
+    <%= f.text_field :earnings, :value => earning.earnings, :size => 5 %>
+  </td> 
+  <td>
+    <%= f.text_field :pe, :value => earning.pe, :size => 5 %>
+  </td>
+  <td>
+    <%= f.text_field :div, :value => earning.div, :size => 5 %>
+  </td>
+  <td>
+   <%= f.text_field :sheq, :value => earning.sheq, :size => 5 %>
+  </td>
+  <td>
+   <%= link_to "Edit Earning", [:edit, @stock, @earning]%>
+  </td>
+  <td>
+   <%= link_to "Delete Earning", [@stock, @earning], :method => :delete,
+          :confirm => "Are you sure you want to delete this ticket?" %>
+  </td>
+
+</tr>
+<%end%> 
+ </p>
+ </table>
+
 </div>

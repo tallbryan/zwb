@@ -4,7 +4,7 @@ class EarningsController < ApplicationController
  before_filter :find_earning, :only => [:show, :edit, :update, :destroy]
 
   def new
-  	@earning = @stock.earnings.build
+    @earning = @stock.earnings.build
   end
 
   def create
@@ -31,13 +31,10 @@ class EarningsController < ApplicationController
   def edit
   end
   
-  def show
+  def index
   end
 
-  def index
-  	#puts params
-  	#@earnings = @stock.earnings.find(params[:id])
-  	#binding.pry
+  def show
   end
 
   def destroy
@@ -52,7 +49,7 @@ private
    end
    
    def find_earning
-    @earning = @stock.earnings.find(params[:id])
+    @earning = @stock.earnings(params[:id])
    end
 
 end

@@ -48,8 +48,12 @@ textarea {
     margin-bottom: 5px;
 }
 
+.stocktable {
+  border:none;
+}
+
 table, td, th{
-  border:1px solid green;
+   border:1px solid green;
 }
 th{
   background-color:green;
@@ -77,12 +81,12 @@ input[type=file] {
     background: #FF3444;
 }
 
-ul#tickets {
+ul#earnings {
     padding: 15px;
     list-style-type: none;
 }
 
-ul#tickets li {
+ul#earnings li {
     margin-bottom: 10px;
 }
 
@@ -109,16 +113,16 @@ ul#tickets li {
     background: #C2EC4B;
 }
 
-ul#tickets .state {
+ul#earnings .state {
     padding-right: 5px;
     /*  margin-right: 4em;*/
 }
 
-ul#tickets .state {
+ul#earnings .state {
     float: left;
 }
 
-#ticket, .comment {
+#earning, .comment {
     margin: 15px 0 15px 0;
     padding: 15px;
     background: #eaeaea;
@@ -127,19 +131,19 @@ ul#tickets .state {
     -webkit-border-radius: 5px;
 }
 
-#ticket a {
+#earning a {
     color: #67A300;
 }
 
-#ticket menu {
+#earning menu {
     font-size: 75%;
 }
 
-menu, #ticket .state, .states {
+menu, #earning .state, .states {
     float: right;
 }
 
-#ticket section {
+#earning section {
     clear: both;
 }
 
@@ -155,11 +159,11 @@ menu, #ticket .state, .states {
     padding: 5px;
 }
 
-#ticket #tags {
+#earning #tags {
     margin-top: 20px;
 }
 
-#ticket .tag {
+#earning .tag {
     background: #232323;
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
@@ -167,11 +171,11 @@ menu, #ticket .state, .states {
     padding: 8px;
 }
 
-#ticket .tag a {
+#earning .tag a {
     color: white;
 }
 
-#ticket .tag .delete {
+#earning .tag .delete {
     font-size: 125%;
     text-decoration: none;
 }
@@ -187,4 +191,3 @@ menu, #ticket .state, .states {
 .comment, .new_comment {
     width: 75%;
 }
-

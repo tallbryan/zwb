@@ -1,6 +1,7 @@
 FactoryGirl.define do
   factory :earning do
-   title "Example Earning"
-   description "An example, nothing more"
+   stock "AMD"
+   pe "1"
+   div "100"
   end
 end

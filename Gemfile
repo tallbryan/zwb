@@ -46,8 +46,8 @@ group :development, :test do
 end
 
 group :test do
-  gem 'capybara', '1.1.2'
-  gem 'cucumber-rails', :require => false
+  gem 'capybara'
+  #gem 'cucumber-rails', :require => false
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
   gem 'factory_girl', '2.6.4'

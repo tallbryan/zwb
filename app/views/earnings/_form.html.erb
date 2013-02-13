@@ -1,32 +1,28 @@
 <%= form_for [@stock, @earning] do |f| %> 
  <%= f.error_messages %>
-
+ <h2><%= @stock.symbol %></h2>
  <table>
 <tr><td><b>Year</td><td><b>Earnings</td><td><b>PE</td><td><b>Div.</td><td ><b>SH EQ</td></tr>
 
-<% 1.times do |row| %>
-
-<tr>
   <td>
-    <%= f.text_field :year, :size => 5 %>
+    <%= f.text_field :year, :value => earning.year, :size => 5 %>
   </td>
   <td>
-    <%= f.text_field :earnings , :size => 5 %>
+    <%= f.text_field :earnings, :value => earning.earnings, :size => 5 %>
   </td> 
   <td>
-    <%= f.text_field :pe , :size => 5 %>
+    <%= f.text_field :pe, :value => earning.pe, :size => 5 %>
   </td>
   <td>
-    <%= f.text_field :div , :size => 5 %>
+    <%= f.text_field :div, :value => earning.div, :size => 5 %>
   </td>
   <td>
-   <%= f.text_field :sheq , :size => 5 %>
+   <%= f.text_field :sheq, :value => earning.sheq, :size => 5 %>
   </td>
 </tr>
-<% end %>
-</table>
-  
+ 
  </p>
- <%= f.submit %>
-<%= link_to "Cancel", stocks_path %>
+ <%= f.submit value="Update Earnings"%>
+ </table>
+<%= link_to "Home", stocks_path %>
 <% end %>

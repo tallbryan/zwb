@@ -11,6 +11,7 @@ feature 'Editing Earnings' do
     fill_in 'Div', :with => '1.23'
     click_button 'Create Stock'	
     page.should have_content('Your Stock has been added.')
+    visit '/'
  	click_link "Add Earnings"
  	fill_in 'earning_year', :with => '2001'
     fill_in 'earning_earnings', :with => '1.50'
@@ -22,7 +23,8 @@ feature 'Editing Earnings' do
  end
 
 scenario "can edit earnings for a stock" do
- 	click_link "Edit Earnings"
+    visit '/'
+ 	click_link "Advanced Mirco Devices"
  	page.should have_content('Edit Earnings')
  	fill_in 'earning_year', :with => '2002'
     fill_in 'earning_earnings', :with => '2.50'
