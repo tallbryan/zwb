@@ -4,7 +4,16 @@ class EarningsController < ApplicationController
  before_filter :find_earning, :only => [:show, :edit, :update, :destroy]
 
   def new
-    @earning = @stock.earnings.build
+    @date = Date.current 
+    @ten_years_ago = @date.years_ago(10).to_s.split(/-/)
+    #@years = @ten_years_ago.to_s.split(/-/)
+
+    10.times do  |e|
+      @earning = @stock.earnings.build
+      @earning.year = (@ten_years_ago[0].to_i + e ) 
+    end
+    @earning
+    binding.pry
   end
 
   def create

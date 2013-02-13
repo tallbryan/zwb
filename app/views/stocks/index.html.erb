@@ -15,8 +15,9 @@
 	<td><%= link_to stock.name, stock%></td>
 	<td><%= stock.symbol.upcase%></td>
 	<td><%= stock.price%></td>
-	<td><%=stock.pe%></td>
+	<td><%= stock.pe%></td>
 	<td><%= stock.div%></td>
+	<td><%= link_to "Add New Earnings", new_stock_earning_path(stock.id) %></td>
 </tr>
 <% end %>
 </table>
