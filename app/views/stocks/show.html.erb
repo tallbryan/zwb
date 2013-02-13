@@ -29,7 +29,8 @@
   stock_path(@stock),
   :method => :delete,
   :confirm => "Hey Buddy!  Are you sure you want to delete this stock?"%></td> 
-    <td class="stocktable"><%= link_to "Add Earnings", new_stock_earning_path(@stock)  %> </td> 
+    <td class="stocktable"><%= link_to "| Add Earnings |", new_stock_earning_path(@stock)  %> </td> 
+    <td class="stocktable"><%= link_to "| Update Earnings |", edit_stock_earning_path(@stock)  %> </td> 
     <td class="stocktable"><%= link_to "Cancel", stocks_path, :method => "get" %> </td> 
   </tr>
 </table>
@@ -61,11 +62,15 @@
   <td>
    <%= earning_fields.text_field :sheq, :size => 5 %>
   </td>
+  <td>
+    <%= earning_fields.text_field :id, :size => 5 %>
+        </td>
 </tr>
 <% end %>
 
 </table>
   <%= f.submit value = "Update Earnings" %>
+ 
  </p>
   <% end %>
 
