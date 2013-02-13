@@ -1,5 +1,5 @@
 class Stock < ActiveRecord::Base
-  attr_accessible :div, :name, :pe, :price, :symbol
+  attr_accessible :div, :name, :pe, :price, :symbol, :earnings_attributes
 
   validates :div, :name, :pe, :price, :symbol, :presence => true
 
