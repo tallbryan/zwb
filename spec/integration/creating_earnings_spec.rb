@@ -19,12 +19,12 @@ scenario "can add new earnings to db for a stock" do
 	  page.should have_content('Earnings') 
     click_link' Add Earnings '
     binding.pry
-	  fill_in ':year', :with => '2002'
-    fill_in 'earning.earnings', :with => '2.50'
-    fill_in 'earning_sheq', :with => '200'
-    fill_in 'earning_pe', :with => '120'
-    fill_in 'earning_div', :with => '2.23'
+	  fill_in 'stock_earnings_attributes_0_year', :with => '2002'
+    fill_in 'stock_earnings_attributes_0_earnings', :with => '2.50'
+    fill_in 'stock_earnings_attributes_0_sheq', :with => '200'
+    fill_in 'stock_earnings_attributes_0_pe', :with => '120'
+    fill_in 'stock_earnings_attributes_0_div', :with => '2.23'
  	  click_button "Update Earnings"
-    page.should have_content("Earnings Saved.")
+    page.should have_content("Stock has been updated.")
  end
 end
