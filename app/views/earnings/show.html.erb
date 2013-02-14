@@ -1,4 +1,4 @@
-<div id='earning'>
+<!-- <div id='earning'>
  <h2>SHOW Earnings for:</br></h2>
 <table>
 <tr><td><b>Year</td><td><b>Earnings</td><td><b>PE</td><td><b>Div.</td><td ><b>SH EQ</td></tr>
@@ -6,7 +6,6 @@
 <%= form_for [@stock, @earning] do |f| %>
 	<%= f.error_messages %>
 
-  	<%# binding.pry %>
   <%= f.fields_for :earnings, @stock.earnings.each do |earning_fields| %>
   <tr>
   <td>
@@ -40,3 +39,4 @@
  
 
 </div>
+ -->
