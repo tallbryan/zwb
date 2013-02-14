@@ -38,13 +38,4 @@ scenario "can edit earnings for a stock" do
  	click_button "Update Earnings"
  	page.should have_content("Stock has been updated.")
  end
-
-=begin
-scenario "can add new earnings to db for a stock" do
-	click_link "Add Earnings"
-	page.should have_content('10 yrs. Earnings')
- 	click_button "Create Earning"	
- end
-=end
-
 end
