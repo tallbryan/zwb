@@ -10,29 +10,33 @@ feature 'Editing Earnings' do
     fill_in 'Pe', :with => '12'
     fill_in 'Div', :with => '1.23'
     click_button 'Create Stock'	
-    page.should have_content('Your Stock has been added.')
+    page.should have_content('Stock has been added.')
     visit '/'
- 	click_link "Add Earnings"
- 	fill_in 'earning_year', :with => '2001'
-    fill_in 'earning_earnings', :with => '1.50'
-    fill_in 'earning_sheq', :with => '100'
-    fill_in 'earning_pe', :with => '12'
-    fill_in 'earning_div', :with => '1.23'
-    click_button 'Create Earning'	
-    page.should have_content('Earnings Saved.')
+    click_link 'Advanced Mirco Devices'  
+    page.should have_content('Earnings') 
+ 	click_link 'Add Earnings'
+ 	fill_in 'stock_earnings_attributes_0_year', :with => '2002'
+    fill_in 'stock_earnings_attributes_0_earnings', :with => '2.50'
+    fill_in 'stock_earnings_attributes_0_sheq', :with => '200'
+    fill_in 'stock_earnings_attributes_0_pe', :with => '120'
+    fill_in 'stock_earnings_attributes_0_div', :with => '2.23'
+    click_button "Update Earnings"
+    page.should have_content("Stock has been updated.")
  end
 
 scenario "can edit earnings for a stock" do
     visit '/'
  	click_link "Advanced Mirco Devices"
- 	page.should have_content('Edit Earnings')
- 	fill_in 'earning_year', :with => '2002'
-    fill_in 'earning_earnings', :with => '2.50'
-    fill_in 'earning_sheq', :with => '200'
-    fill_in 'earning_pe', :with => '120'
-    fill_in 'earning_div', :with => '2.23'
- 	click_button "Update Earning"
- 	page.should have_content('Earnings have been updated.')
+ 	page.should have_content('Earnings')
+    click_link '| Edit Earnings |'
+    page.should have_content('Edit Earnings')
+ 	fill_in 'stock_earnings_attributes_0_year', :with => '2003'
+    fill_in 'stock_earnings_attributes_0_earnings', :with => '3.50'
+    fill_in 'stock_earnings_attributes_0_sheq', :with => '300'
+    fill_in 'stock_earnings_attributes_0_pe', :with => '320'
+    fill_in 'stock_earnings_attributes_0_div', :with => '3.23'
+ 	click_button "Update Earnings"
+ 	page.should have_content("Stock has been updated.")
  end
 
 =begin

@@ -18,7 +18,6 @@ scenario "can add new earnings to db for a stock" do
     click_link 'Advanced Mirco Devices'  
 	  page.should have_content('Earnings') 
     click_link' Add Earnings '
-    binding.pry
 	  fill_in 'stock_earnings_attributes_0_year', :with => '2002'
     fill_in 'stock_earnings_attributes_0_earnings', :with => '2.50'
     fill_in 'stock_earnings_attributes_0_sheq', :with => '200'
