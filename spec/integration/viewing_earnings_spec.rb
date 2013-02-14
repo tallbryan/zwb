@@ -2,28 +2,21 @@ require 'spec_helper'
 
   feature "Viewing Earnings" do
    before do
-    abt = Factory(:stock, :name => "Abbott Labs", 
-                  :pe => "1", :price => "2.00", :div => "23", 
-                  :symbol => "ABT")
-    Factory(:earning,
-            :stock => abt,
-            :pe => "12",
-            :div => "123")          
-
-    msft = Factory(:stock, :name => "Microsoft",
-                   :pe => "12", :price => "22.00", :div => "3", 
-                   :symbol => "MSFT")
-    Factory(:earning,
-            :stock => msft,
-            :pe => "12345",
-            :div => "123490")
-    visit '/'
+    visit '/stocks'
+    click_link 'New Stock'
+    fill_in 'Name', :with => 'Advanced Mirco Devices'
+    fill_in 'Symbol', :with => 'AMD'
+    fill_in 'Price', :with => '3.34'
+    fill_in 'Pe', :with => '12'
+    fill_in 'Div', :with => '1.23'
+    click_button 'Create Stock'
+    page.should have_content('Stock has been added.')
+    visit '/stocks'
  end
   
   scenario "Viewing Earnings for a given Stock" do
-   #binding.pry
-   click_link "Abbott Labs"
-   page.should have_content("ABT")
+   click_link "Advanced Mirco Devices"
+   page.should have_content('AMD') 
    page.should_not have_content("MSFT")
    page.should have_content("Earnings")
   end
