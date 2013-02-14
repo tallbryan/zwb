@@ -5,5 +5,5 @@ class Stock < ActiveRecord::Base
 
   has_many :earnings,  :dependent => :delete_all
 
-  accepts_nested_attributes_for :earnings
+  accepts_nested_attributes_for :earnings, :allow_destroy => true
 end

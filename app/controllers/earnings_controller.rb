@@ -13,7 +13,7 @@ class EarningsController < ApplicationController
       @earning.year = (@ten_years_ago[0].to_i + e ) 
     end
     @earning
-    binding.pry
+    #binding.pry
   end
 
   def create
@@ -47,7 +47,7 @@ class EarningsController < ApplicationController
   end
 
   def destroy
-    @earning.destroy
+    @earning.delete
     flash[:notice] = "Earning has been deleted."
     redirect_to @stock
   end

@@ -2,7 +2,7 @@
  <%= f.error_messages %>
  <h2><%= @stock.symbol %></h2>
  <table>
-<tr><td><b>Year</td><td><b>Earnings</td><td><b>PE</td><td><b>Div.</td><td ><b>SH EQ</td></tr>
+<tr><td><b>Year</td><td><b>Earnings</td><td><b>PE</td><td><b>Div.</td><td ><b>SH EQ</td><td>ID</td><td>Delete</td></tr>
 
  <%= f.fields_for :earnings do |earning_fields| %>
   <tr>
@@ -24,12 +24,14 @@
   <td>
     <%= earning_fields.text_field :id, :size => 5 %>
   </td>
+  <td>
+    <%= earning_fields.check_box :_destroy, :size => 5 %>
+  </td>
 </tr>
 <% end %>
 </table>
   <%= f.submit value = "| Update Earnings |" %></br>
-   <%= link_to "| Delete Earnings |", [@stock, @earnings], :method => :delete,
-          :confirm => "Are you sure you want to delete this ticket?" %>
+   
 </tr>
  </p>
 <%= link_to "Home", stocks_path %>

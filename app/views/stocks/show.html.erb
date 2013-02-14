@@ -30,7 +30,7 @@
   :method => :delete,
   :confirm => "Hey Buddy!  Are you sure you want to delete this stock?"%></td> 
     <td class="stocktable"><%= link_to "| Add Earnings |", new_stock_earning_path(@stock)  %> </td> 
-    <td class="stocktable"><%= link_to "| Update Earnings |", edit_stock_earning_path(@stock)  %> </td> 
+    <td class="stocktable"><%= link_to "Edit Earning", edit_stock_earning_path(@stock)%> </td> 
     <td class="stocktable"><%= link_to "Cancel", stocks_path, :method => "get" %> </td> 
   </tr>
 </table>
@@ -69,7 +69,7 @@
 <% end %>
 
 </table>
-  <%= f.submit value = "Update Earnings" %>
+  <%# = f.submit value = "Update Earnings" %>
  
  </p>
   <% end %>
