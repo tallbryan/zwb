@@ -13,7 +13,6 @@ class StocksController < ApplicationController
  before_filter :find_stock, :only => [:show, :edit, :update, :destroy]
 
  def index
-  #flash[:notice] = "#{params}"
   @stocks = Stock.all
   
   if params[:format] == "update_all"
@@ -45,7 +44,6 @@ class StocksController < ApplicationController
  end 
  
  def edit
-  #flash[:notice] = "#{params}"
   @stock = Stock.find(params[:id])
  end
 
@@ -62,7 +60,6 @@ class StocksController < ApplicationController
 
 
  def create
-  #flash[:notice] = "#{params}"
   @stock = Stock.new(params[:stock])
 
   if @stock.save
@@ -75,12 +72,11 @@ class StocksController < ApplicationController
  end
 
  def show
-  #flash[:notice] = "#{params}"
   @stock = Stock.find(params[:id])
+  @earning = @stock.earnings
  end
 
  def destroy
-  flash[:notice] = "#{params}"
   @stock = Stock.find(params[:id])
   @stock.destroy
   flash[:notice] = "Stock has been deleted."

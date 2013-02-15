@@ -2,7 +2,12 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
 gem 'dynamic_form', '1.1.4'
+
+# Bundle edge Rails instead:
+# gem 'rails', :git => 'git://github.com/rails/rails.git'
+
 gem 'sqlite3'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -38,6 +43,8 @@ gem 'yahoofinance', '1.2.2'
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.11'
+  gem 'pry-rails'
+  gem 'hirb'
 end
 
 group :test do
@@ -45,8 +52,4 @@ group :test do
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
   gem 'factory_girl', '2.6.4'
-end
-
-group :production do
-
 end
