@@ -56,3 +56,7 @@ input {
   @extend .control-group;
   @extend .error;
  }
+
+ .center h1 {
+  margin-bottom: 10px;
+}
