@@ -1,8 +1,12 @@
 class PortfoliosController < ApplicationController
+  def index
+    @portfolios = Portfolio.all
+  end
+  
   def new
     @portfolio = Portfolio.new
   end
-  
+
   def create
     @portfolio = Portfolio.new (params[:portfolio])
     if @portfolio.save
