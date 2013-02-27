@@ -1,0 +1,15 @@
+  stock_earnings GET    /stocks/:stock_id/earnings(.:format)            earnings#index
+                   POST   /stocks/:stock_id/earnings(.:format)          earnings#create
+ new_stock_earning GET    /stocks/:stock_id/earnings/new(.:format)      earnings#new
+edit_stock_earning GET    /stocks/:stock_id/earnings/:id/edit(.:format) earnings#edit
+     stock_earning GET    /stocks/:stock_id/earnings/:id(.:format)      earnings#show
+                   PUT    /stocks/:stock_id/earnings/:id(.:format)      earnings#update
+                   DELETE /stocks/:stock_id/earnings/:id(.:format)      earnings#destroy
+            stocks GET    /stocks(.:format)                             stocks#index
+                   POST   /stocks(.:format)                             stocks#create
+         new_stock GET    /stocks/new(.:format)                         stocks#new
+        edit_stock GET    /stocks/:id/edit(.:format)                    stocks#edit
+             stock GET    /stocks/:id(.:format)                         stocks#show
+                   PUT    /stocks/:id(.:format)                         stocks#update
+                   DELETE /stocks/:id(.:format)                         stocks#destroy
+              root        /                                             stocks#index
