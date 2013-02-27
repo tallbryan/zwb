@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
   <head>
     <title><%= full_title(yield(:title)) %></title>
     <%= stylesheet_link_tag "application", media: "all" %>
@@ -28,27 +27,4 @@
 
         <%= debug(params) if Rails.env.development? %>
   </body>
-=======
-
-<head>
-  <title>Zwb</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-<% flash.each do |key, value| %>
-<div class='flash' id='<%= key %>'>
-<%= value %>
-</div>
-<% end %>
-
-
-</body>
-
->>>>>>> 42c93b1ee11c2f07aa5780e42d486cf7213338ec
 </html>
-
-        

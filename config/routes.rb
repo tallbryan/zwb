@@ -1,9 +1,10 @@
 Zwb::Application.routes.draw do
-<<<<<<< HEAD
   
   resources :users
 
   resources :sessions, only: [:new, :create, :destroy]
+
+  root :to => 'stocks#index'
 
   root              to: 'static_pages#home'
 
@@ -16,9 +17,7 @@ Zwb::Application.routes.draw do
   match '/contact', to: 'static_pages#contact'
 
   # The priority is based upon order of creation:
-=======
-    # The priority is based upon order of creation:
->>>>>>> 42c93b1ee11c2f07aa5780e42d486cf7213338ec
+
   # first created -> highest priority.
 
   # Sample of regular route:
@@ -72,7 +71,6 @@ Zwb::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'stocks#index'
 
   # See how all your routes lay out with "rake routes"
 
