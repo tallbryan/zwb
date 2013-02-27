@@ -3,5 +3,7 @@ class Stock < ActiveRecord::Base
 
   validates :div, :name, :pe, :price, :symbol, :presence => true
 
+  belongs_to :portfolio
+
   #has_many :earnings, :dependent => :delete_all
 end

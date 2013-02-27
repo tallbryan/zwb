@@ -4,9 +4,11 @@ feature "Editing Portfolios" do
 	3.times do
 		Factory(:portfolio)
 	end
+	portfolio = Factory(:portfolio)
 	stock_list = ["AMD", "AAPL", "IBM", "MSFT", "MMM"]
+	binding.pry
 	stock_list.each do |s|
-		Factory(:stock, :symbol => s)
+		Factory(:stock, :symbol => s, :portfolio => portfolio)
 	end
 
 
@@ -14,7 +16,7 @@ feature "Editing Portfolios" do
 	before do
 		visit '/'
 		click_link 'Portfolios'
-		click_link 'Portfolio 2'
+		click_link 'Portfolio 4'
 		click_button 'Edit Portfolio'
 	end
 
