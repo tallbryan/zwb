@@ -13,7 +13,7 @@ Zwb::Application.routes.draw do
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
   resources :stocks do
-    resources :earnings
+    resources :earnings, :projected_earnings, :discount_cash_flows 
   end
   
   resources :portfolios do
