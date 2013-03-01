@@ -4,24 +4,48 @@
 		"selected_items":
 		[
 			[
-				"stocks",
-				"stocks_path"
+				"click",
+				"click_button"
 			],
 			[
-				"div",
-				"dividendYield"
+				"earning",
+				"earning_fields"
 			],
 			[
-				"pe",
-				"peRatio"
+				"earnin",
+				"earning_fields"
 			],
 			[
-				"stock",
+				"earn",
+				"earning_fields"
+			],
+			[
+				"ear",
+				"earning_fields"
+			],
+			[
+				"sto",
 				"stock"
 			],
 			[
-				"Stock",
-				"stock"
+				"do",
+				"dob	Insert do |variable| … end"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"h",
+				"h2	Tag"
+			],
+			[
+				"bin",
+				"binding"
+			],
+			[
+				"not",
+				"notice"
 			],
 			[
 				"rb",
@@ -136,66 +160,18 @@
 	"buffers":
 	[
 		{
-			"file": "README.md",
+			"file": "app/controllers/earnings_controller.rb",
 			"settings":
 			{
-				"buffer_size": 1967,
+				"buffer_size": 1290,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Gemfile",
+			"file": "spec/integration/creating_earnings_spec.rb",
 			"settings":
 			{
-				"buffer_size": 1079,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "config/routes.rb",
-			"settings":
-			{
-				"buffer_size": 1970,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "rake_routes.txt",
-			"settings":
-			{
-				"buffer_size": 502,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "spec/integration/creating_stocks_spec.rb",
-			"settings":
-			{
-				"buffer_size": 647,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/stock.rb",
-			"settings":
-			{
-				"buffer_size": 205,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "db/schema.rb",
-			"settings":
-			{
-				"buffer_size": 1051,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/stocks/new.html.erb",
-			"settings":
-			{
-				"buffer_size": 20,
+				"buffer_size": 989,
 				"line_ending": "Unix"
 			}
 		},
@@ -203,7 +179,15 @@
 			"file": "app/views/stocks/show.html.erb",
 			"settings":
 			{
-				"buffer_size": 392,
+				"buffer_size": 2035,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/earnings/new.html.erb",
+			"settings":
+			{
+				"buffer_size": 44,
 				"line_ending": "Unix"
 			}
 		},
@@ -211,95 +195,23 @@
 			"file": "app/views/stocks/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 506,
+				"buffer_size": 614,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "spec/support/factories/stock_factory.rb",
+			"file": "app/models/stock.rb",
 			"settings":
 			{
-				"buffer_size": 64,
+				"buffer_size": 304,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "spec/integration/viewing_stocks_spec.rb",
+			"file": "app/views/earnings/edit.html.erb",
 			"settings":
 			{
-				"buffer_size": 352,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "spec/integration/editing_stocks_spec.rb",
-			"settings":
-			{
-				"buffer_size": 663,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/stocks_controller.rb",
-			"settings":
-			{
-				"buffer_size": 2261,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/stocks/_form.html.erb",
-			"settings":
-			{
-				"buffer_size": 514,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/stocks/edit.html.erb",
-			"settings":
-			{
-				"buffer_size": 41,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "spec/integration/deleting_projects_spec.rb",
-			"settings":
-			{
-				"buffer_size": 418,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "spec/controllers/stocks_controller_spec.rb",
-			"settings":
-			{
-				"buffer_size": 291,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/stylesheets/application.css",
-			"settings":
-			{
-				"buffer_size": 2959,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "spec/integration/update_all_stocks_spec.rb",
-			"settings":
-			{
-				"buffer_size": 377,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/stocks/update_all.html.erb",
-			"settings":
-			{
-				"buffer_size": 19,
+				"buffer_size": 44,
 				"line_ending": "Unix"
 			}
 		},
@@ -307,7 +219,55 @@
 			"file": "app/views/earnings/_form.html.erb",
 			"settings":
 			{
-				"buffer_size": 695,
+				"buffer_size": 912,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/integration/viewing_earnings_spec.rb",
+			"settings":
+			{
+				"buffer_size": 639,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/integration/delete_earnings_spec.rb",
+			"settings":
+			{
+				"buffer_size": 1278,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/earnings/show.html.erb",
+			"settings":
+			{
+				"buffer_size": 985,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/integration/editing_earnings_spec.rb",
+			"settings":
+			{
+				"buffer_size": 1549,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/earning.rb",
+			"settings":
+			{
+				"buffer_size": 182,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 1093,
 				"line_ending": "Unix"
 			}
 		}
@@ -315,15 +275,15 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 360.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
 				"Snippet: ",
-				"Snippet: #!/usr/bin/env"
+				"Snippet: html"
 			]
 		],
-		"width": 504.0
+		"width": 575.0
 	},
 	"console":
 	{
@@ -340,29 +300,51 @@
 	},
 	"file_history":
 	[
-		"/home/wsugg/zwb/spec/controllers/projects_controller_spec.rb",
-		"/home/wsugg/zwb/app/views/layouts/application.html.erb",
-		"/home/wsugg/zwb/app/controllers/stocks_controller.rb",
+		"/home/wsugg/zwb/app/models/earning.rb",
+		"/home/wsugg/zwb/spec/integration/editing_earnings_spec.rb",
+		"/home/wsugg/zwb/spec/integration/creating_stocks_spec.rb",
+		"/home/wsugg/zwb/app/views/earnings/index.html.erb",
+		"/home/wsugg/zwb/spec/support/factories/earning_factory.rb",
+		"/home/wsugg/zwb/spec/integration/delete_earnings_spec.rb",
 		"/home/wsugg/zwb/app/views/stocks/index.html.erb",
-		"/home/wsugg/zwb/app/views/stocks/new.html.erb",
-		"/home/wsugg/zwb/app/views/yahoo_data/new.html.erb",
-		"/home/wsugg/zwb/db/migrate/20130131055753_create_yahoo_data.rb",
-		"/home/wsugg/zwb/spec/models/stocks_spec.rb",
-		"/home/wsugg/zwb/spec/models/yahoo_data_spec.rb",
+		"/home/wsugg/zwb/app/controllers/stocks_controller.rb",
+		"/home/wsugg/zwb/spec/integration/viewing_stocks_spec.rb",
 		"/home/wsugg/zwb/app/models/stock.rb",
-		"/home/wsugg/zwb/db/migrate/20130131093946_create_stocks.rb",
-		"/home/wsugg/zwb/db/schema.rb",
-		"/home/wsugg/zwb/db/migrate/20130131092624_create_stocks.rb",
-		"/home/wsugg/zwb/app/models/stocks.rb",
-		"/home/wsugg/zwb/app/controllers/yahoo_data_controller.rb",
-		"/home/wsugg/zwb/app/views/yahoo_data/index.html.erb",
-		"/home/wsugg/yahootest/spec/integration/yahoo_project_spec.rb",
-		"/home/wsugg/zwb/spec/support/factories/stocks_factory.rb",
-		"/home/wsugg/yahootest/app/models/yahoo_project.rb",
-		"/home/wsugg/yahootest/app/controllers/yahoo_projects_controller.rb",
-		"/home/wsugg/zwb/app/views/index.html.erb",
-		"/home/wsugg/yahootest/Gemfile",
-		"/home/wsugg/yahootest/app/controllers/application_controller.rb",
+		"/home/wsugg/zwb/app/views/earnings/show.html.erb",
+		"/home/wsugg/zwb/app/views/earnings/_form.html.erb",
+		"/home/wsugg/zwb/app/views/earnings/new.html.erb",
+		"/home/wsugg/zwb/app/views/earnings/edit.html.erb",
+		"/home/wsugg/zwb/spec/integration/viewing_earnings_spec.rb",
+		"/home/wsugg/zwb/Gemfile",
+		"/home/wsugg/zwb/spec/integration/earnings_index_spec.rb",
+		"/home/wsugg/zwb/spec/integration/editing_stocks_spec.rb",
+		"/home/wsugg/zwb/spec/support/factories/stock_factory.rb",
+		"/home/wsugg/zwb/app/assets/stylesheets/buttons.css",
+		"/home/wsugg/zwb/app/assets/stylesheets/application.css",
+		"/home/wsugg/zwb/app/controllers/earnings_controller.rb",
+		"/home/wsugg/zwb/config/environments/development.rb",
+		"/home/wsugg/zwb/config/environments/test.rb",
+		"/home/wsugg/zwb/app/views/stocks/show.html.erb",
+		"/home/wsugg/zwb/config/routes.rb",
+		"/home/wsugg/ticketee/app/controllers/projects_controller.rb",
+		"/home/wsugg/ticketee/app/views/projects/new.html.erb",
+		"/home/wsugg/ticketee/spec/integration/editing_projects_spec.rb",
+		"/home/wsugg/ticketee/spec/support/factory/project_factory.rb",
+		"/home/wsugg/ticketee/app/views/projects/_form.html.erb",
+		"/home/wsugg/ticketee/app/views/projects/edit.html.erb",
+		"/home/wsugg/ticketee/spec/integration/deleting_projects_spec.rb",
+		"/home/wsugg/ticketee/spec/controllers/projects_controller_spec.rb",
+		"/home/wsugg/ticketee/config/environments/production.rb",
+		"/home/wsugg/ticketee/spec/integration/viewing_projects_spec.rb",
+		"/home/wsugg/ticketee/Gemfile",
+		"/home/wsugg/ticketee/config/database.yml",
+		"/home/wsugg/ticketee/app/assets/stylesheets/application.css",
+		"/home/wsugg/ticketee/app/views/layouts/application.html.erb",
+		"/home/wsugg/ticketee/app/helpers/application_helper.rb",
+		"/home/wsugg/ticketee/spec/integration/creating_projects_spec.rb",
+		"/home/wsugg/ticketee/app/models/project.rb",
+		"/home/wsugg/ticketee/.gitignore",
+		"/home/wsugg/ticketee/db/migrate/20130122211113_create_projects.rb",
 		"/home/wsugg/zwb/README.md",
 		"/home/wsugg/ticketee/README.md",
 		"/home/wsugg/ticketee/README.rdoc",
@@ -379,6 +361,7 @@
 		"/home/wsugg/UW_Rails/things_i_bought/app/views/purchases/show.html.erb",
 		"/home/wsugg/UW_Rails/things_i_bought/app/views/purchases/edit.html.erb",
 		"/home/wsugg/UW_Rails/things_i_bought/app/views/purchases/_form.html.erb",
+		"/home/wsugg/yahootest/Gemfile",
 		"/home/wsugg/UW_Rails/things_i_bought/Gemfile",
 		"/home/wsugg/UW_Rails/things_i_bought/example/bacon_test.rb",
 		"/home/wsugg/UW_Rails/things_i_bought/app/models/purchase.rb",
@@ -444,30 +427,7 @@
 		"/home/wsugg/RubyFall2012/week8/exercises/couch.rb",
 		"/home/wsugg/RubyFall2012/week8/exercises/books.rb",
 		"/home/wsugg/RubyFall2012/week8/exercises/book_spec.rb",
-		"/home/wsugg/RubyFall2012/week7/exercises/features/step_definitions/converter.rb",
-		"/home/wsugg/RubyFall2012/week4/exercises/worker_spec.rb",
-		"/home/wsugg/Fall2012RubyMidTerm/mid_term_spec.rb",
-		"/home/wsugg/beep/lib/beep.rb",
-		"/home/wsugg/beep/lib/beep/sound.rb",
-		"/home/wsugg/.rvm/gems/ruby-1.9.3-p194/gems/audiosocket-0.3.2/lib/audiosocket.rb",
-		"/home/wsugg/beep/spec/beep/sound_spec.rb",
-		"/home/wsugg/.rvm/gems/ruby-1.9.3-p194/gems/beep-0.0.1/lib/beep.rb",
-		"/home/wsugg/.rvm/gems/ruby-1.9.3-p194/gems/audiosocket-0.3.2/lib/audiosocket/client.rb",
-		"/home/wsugg/.rvm/gems/ruby-1.9.3-p194/gems/audiosocket-0.3.2/lib/audiosocket/errors.rb",
-		"/home/wsugg/.rvm/gems/ruby-1.9.3-p194/gems/audiosocket-0.3.2/README.md",
-		"/home/wsugg/RubyFall2012/week3/exercises/monster.rb",
-		"/home/wsugg/RubyFall2012/week3/exercises/monsters.rb",
-		"/home/wsugg/RubyFall2012/week3/exercises/vampire.rb",
-		"/home/wsugg/RubyFall2012/week4/exercises/worker.rb",
-		"/home/wsugg/RubyFall2012/week6/wsugg_gem/Gemfile",
-		"/home/wsugg/RubyFall2012/week6/wsugg_gem/Rakefile",
-		"/home/wsugg/RubyFall2012/week6/wsugg_gem/VERSION",
-		"/home/wsugg/RubyFall2012/week6/wsugg_gem/LICENSE.txt",
-		"/home/wsugg/RubyFall2012/week6/wsugg_gem/spec/wsugg_gem_spec.rb",
-		"/home/wsugg/RubyFall2012/week6/wsugg_gem/spec/spec_helper.rb",
-		"/home/wsugg/RubyFall2012/week6/wsugg_gem/lib/wsugg_gem.rb",
-		"/home/wsugg/RubyFall2012/week6/wsugg_gem/.gitignore",
-		"/home/wsugg/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings"
+		"/home/wsugg/RubyFall2012/week7/exercises/features/step_definitions/converter.rb"
 	],
 	"find":
 	{
@@ -485,8 +445,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"\")",
-			"h1",
+			"green",
+			"ticket",
+			"tickets",
+			"10 yrs. Earnings",
 			"=",
 			" ",
 			" 	",
@@ -500,7 +462,8 @@
 		"regex": true,
 		"replace_history":
 		[
-			"\" => H3",
+			"earning",
+			"earnings",
 			"\" => ",
 			"",
 			"\"",
@@ -515,15 +478,126 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "README.md",
+					"file": "app/controllers/earnings_controller.rb",
 					"settings":
 					{
-						"buffer_size": 1967,
+						"buffer_size": 1290,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1054,
+								1054
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 196.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "spec/integration/creating_earnings_spec.rb",
+					"settings":
+					{
+						"buffer_size": 989,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								980,
+								980
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/stocks/show.html.erb",
+					"settings":
+					{
+						"buffer_size": 2035,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1499,
+								1499
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 513.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/earnings/new.html.erb",
+					"settings":
+					{
+						"buffer_size": 44,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								44,
+								44
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/stocks/index.html.erb",
+					"settings":
+					{
+						"buffer_size": 614,
 						"regions":
 						{
 						},
@@ -536,117 +610,8 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Gemfile",
-					"settings":
-					{
-						"buffer_size": 1079,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								56,
-								56
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 867.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "config/routes.rb",
-					"settings":
-					{
-						"buffer_size": 1970,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								512,
-								512
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "rake_routes.txt",
-					"settings":
-					{
-						"buffer_size": 502,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								84,
-								84
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "spec/integration/creating_stocks_spec.rb",
-					"settings":
-					{
-						"buffer_size": 647,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								414,
-								414
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -659,15 +624,15 @@
 					"file": "app/models/stock.rb",
 					"settings":
 					{
-						"buffer_size": 205,
+						"buffer_size": 304,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								205,
-								205
+								120,
+								120
 							]
 						],
 						"settings":
@@ -682,10 +647,10 @@
 				},
 				{
 					"buffer": 6,
-					"file": "db/schema.rb",
+					"file": "app/views/earnings/edit.html.erb",
 					"settings":
 					{
-						"buffer_size": 1051,
+						"buffer_size": 44,
 						"regions":
 						{
 						},
@@ -698,7 +663,7 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -708,18 +673,18 @@
 				},
 				{
 					"buffer": 7,
-					"file": "app/views/stocks/new.html.erb",
+					"file": "app/views/earnings/_form.html.erb",
 					"settings":
 					{
-						"buffer_size": 20,
+						"buffer_size": 912,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								206,
+								206
 							]
 						],
 						"settings":
@@ -736,23 +701,25 @@
 				},
 				{
 					"buffer": 8,
-					"file": "app/views/stocks/show.html.erb",
+					"file": "spec/integration/viewing_earnings_spec.rb",
 					"settings":
 					{
-						"buffer_size": 392,
+						"buffer_size": 639,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								392,
-								392
+								639,
+								639
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -762,23 +729,25 @@
 				},
 				{
 					"buffer": 9,
-					"file": "app/views/stocks/index.html.erb",
+					"file": "spec/integration/delete_earnings_spec.rb",
 					"settings":
 					{
-						"buffer_size": 506,
+						"buffer_size": 1278,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								29,
-								29
+								1266,
+								1266
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -788,23 +757,25 @@
 				},
 				{
 					"buffer": 10,
-					"file": "spec/support/factories/stock_factory.rb",
+					"file": "app/views/earnings/show.html.erb",
 					"settings":
 					{
-						"buffer_size": 64,
+						"buffer_size": 985,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								48,
-								48
+								228,
+								228
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -814,51 +785,51 @@
 				},
 				{
 					"buffer": 11,
-					"file": "spec/integration/viewing_stocks_spec.rb",
+					"file": "spec/integration/editing_earnings_spec.rb",
 					"settings":
 					{
-						"buffer_size": 352,
+						"buffer_size": 1549,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								248,
-								248
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 274.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 12,
-					"file": "spec/integration/editing_stocks_spec.rb",
+					"file": "app/models/earning.rb",
 					"settings":
 					{
-						"buffer_size": 663,
+						"buffer_size": 182,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								463,
-								463
+								58,
+								58
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -868,18 +839,18 @@
 				},
 				{
 					"buffer": 13,
-					"file": "app/controllers/stocks_controller.rb",
+					"file": "Gemfile",
 					"settings":
 					{
-						"buffer_size": 2261,
+						"buffer_size": 1093,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1079,
-								1079
+								0,
+								0
 							]
 						],
 						"settings":
@@ -889,223 +860,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 272.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "app/views/stocks/_form.html.erb",
-					"settings":
-					{
-						"buffer_size": 514,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								61,
-								61
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "app/views/stocks/edit.html.erb",
-					"settings":
-					{
-						"buffer_size": 41,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								14,
-								14
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "spec/integration/deleting_projects_spec.rb",
-					"settings":
-					{
-						"buffer_size": 418,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								283,
-								283
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 17,
-					"file": "spec/controllers/stocks_controller_spec.rb",
-					"settings":
-					{
-						"buffer_size": 291,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								103,
-								103
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 18,
-					"file": "app/assets/stylesheets/application.css",
-					"settings":
-					{
-						"buffer_size": 2959,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								980,
-								980
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 491.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 19,
-					"file": "spec/integration/update_all_stocks_spec.rb",
-					"settings":
-					{
-						"buffer_size": 377,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								377,
-								377
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 20,
-					"file": "app/views/stocks/update_all.html.erb",
-					"settings":
-					{
-						"buffer_size": 19,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								19,
-								19
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 21,
-					"file": "app/views/earnings/_form.html.erb",
-					"settings":
-					{
-						"buffer_size": 695,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								250,
-								250
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 195.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1119,7 +874,7 @@
 	},
 	"input":
 	{
-		"height": 33.0
+		"height": 0.0
 	},
 	"layout":
 	{
@@ -1144,10 +899,6 @@
 		]
 	},
 	"menu_visible": true,
-	"output.exec":
-	{
-		"height": 32.0
-	},
 	"replace":
 	{
 		"height": 64.0
@@ -1168,7 +919,7 @@
 		[
 			[
 				"",
-				"/home/wsugg/yahootest/YF.sublime-project"
+				"/home/wsugg/zwb/zwb.sublime-project"
 			]
 		],
 		"width": 380.0
@@ -1177,6 +928,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 253.0,
-	"status_bar_visible": false
+	"side_bar_width": 300.0,
+	"status_bar_visible": true
 }
