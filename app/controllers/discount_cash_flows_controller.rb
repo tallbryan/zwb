@@ -1,0 +1,2 @@
+class DiscountCashFlowsController < ApplicationController
+end
