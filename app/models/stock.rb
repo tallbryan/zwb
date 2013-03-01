@@ -3,7 +3,9 @@ class Stock < ActiveRecord::Base
 
   validates :div, :name, :pe, :price, :symbol, :presence => true
 
-  has_many :earnings, :projected_earnings, :discount_cash_flows,  :dependent => :delete_all
+  has_many :earnings, :dependent => :delete_all
+  has_many :projected_earnings
+  has_many :discount_cash_flows  
 
-  accepts_nested_attributes_for :earnings, :projected_earnings, :discount_cash_flows, :allow_destroy => true
+  accepts_nested_attributes_for :earnings,  :allow_destroy => true
 end
