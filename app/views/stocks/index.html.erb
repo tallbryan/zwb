@@ -7,6 +7,7 @@
 	<td width="100"><b>Price</td>
 	<td width="100"><b>PE</td>
 	<td width="100"><b>Div</td>
+	<td width="100"><b>Guess Growth</td>
 </tr>
 
 <% @stocks.each do |stock| %>
@@ -16,7 +17,8 @@
 	<td><%= stock.symbol.upcase%></td>
 	<td><%= stock.price%></td>
 	<td><%= stock.pe%></td>
-	<td><%= stock.div%></td>	
+	<td><%= stock.div%></td>
+	<td><%= stock.guess_growth%></td>	
 </tr>
 <% end %>
 </table>

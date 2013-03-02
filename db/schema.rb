@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130212050738) do
+ActiveRecord::Schema.define(:version => 20130302055619) do
+
+  create_table "discount_cash_flows", :force => true do |t|
+    t.integer  "year"
+    t.float    "prev_cash_flow"
+    t.float    "growth_rate"
+    t.float    "cash_flow"
+    t.float    "discount_factor"
+    t.float    "total"
+    t.integer  "stock_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "discount_cash_flows", ["stock_id"], :name => "index_discount_cash_flows_on_stock_id"
 
   create_table "earnings", :force => true do |t|
     t.integer  "year"
@@ -32,14 +46,26 @@ ActiveRecord::Schema.define(:version => 20130212050738) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "projected_earnings", :force => true do |t|
+    t.float    "earnings"
+    t.float    "ave_pe"
+    t.integer  "year"
+    t.integer  "stock_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "projected_earnings", ["stock_id"], :name => "index_projected_earnings_on_stock_id"
+
   create_table "stocks", :force => true do |t|
     t.string   "name"
     t.string   "symbol"
     t.float    "price"
     t.float    "pe"
     t.float    "div"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.float    "guess_growth"
   end
 
 end
