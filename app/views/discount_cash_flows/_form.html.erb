@@ -1,3 +1,10 @@
 <%= @stock.name    %><br>
 EPS: <%= @eps.round(2) %> <br>
 Total_FV: <%= @total_FV  %><br>
+guess growth <%=@stock.guess_growth%>
+
+<ul>
+<% @array.each do |e| %>
+<li><%= e %></li>
+<%end%>
+</ul>
