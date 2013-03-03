@@ -27,6 +27,11 @@
     <%= f.text_field :guess_growth %>
    </p>
    <p>
+    <%= f.label :ten_year_growth %><br />
+    <%= f.text_field :ten_year_growth %>
+     <%= binding.pry %>
+   </p>
+   <p>
     <%= f.submit %>
     <%= link_to "Home", stocks_path %>
  <% end %>
