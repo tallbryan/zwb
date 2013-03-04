@@ -1,3 +1,5 @@
+
+
 class ProjectedEarningsController < ApplicationController
 
 include Calc
