@@ -11,14 +11,12 @@ include Calc
  		                                    }
   @hash = {}
    
-
   @stock = Stock.find(params[:stock_id])
   @real_earnings = @stock.earnings(params[:id])
   years = 10
-  @eps = (@stock.price / @stock.pe).round(2)
-  
+  @eps = (@stock.price / @stock.pe)
   @hash[0] = [ 
-           @Two_Stage_Dividend_Discount_Model[:prior_year_cash_flow] = @eps,
+           @Two_Stage_Dividend_Discount_Model[:prior_year_cash_flow] = @eps.round(2),
            @Two_Stage_Dividend_Discount_Model[:stock_guess_growth]   = @stock.guess_growth,
            @Two_Stage_Dividend_Discount_Model[:cash_flow]            = ((@eps * @stock.guess_growth.percent) + @Two_Stage_Dividend_Discount_Model[:prior_year_cash_flow]).round(2),
            @Two_Stage_Dividend_Discount_Model[:discount_factor]      = (1/ (1+10.percent)).round(4),
@@ -35,31 +33,37 @@ include Calc
                 ]
    end
 
-  residual_values(@hash)
+  residual_values
 
  end
 
- def residual_values(p)
+ def residual_values
   second_stage_growth_rate = 5.percent
   t_bill_yield = 10.percent
-  hash = p
-  cashflow_in_ten_years =  hash[9][2]
-  discount_factor_at_year_ten = hash[9][3]
-  discount_total_totals  = 0
-  hash.each{|k,v| discount_total_totals += v[4]}
- 
-
-  #discount_total_totals += hash[t][4]
-  puts discount_total_totals
-
   
-  @total_second_stage_growth = ((second_stage_growth_rate * cashflow_in_ten_years) +cashflow_in_ten_years).round(2)
-  @capitization_rate = (t_bill_yield  -second_stage_growth_rate)
+  cashflow_in_ten_years =  @hash[9][2]
+  discount_factor_at_year_ten = @hash[9][3]
+  discount_total_totals  = 0
+  @hash.each{|k,v| discount_total_totals += v[4]}
+  
+  @total_second_stage_growth = ((second_stage_growth_rate * cashflow_in_ten_years) +cashflow_in_ten_years)
+  @capitization_rate = (t_bill_yield - second_stage_growth_rate)
   @value_at_year_ten = @total_second_stage_growth / @capitization_rate 
-  @present_value_of_residual = (@value_at_year_ten * discount_factor_at_year_ten).round(2)
-  @market_value_of_company = (discount_total_totals + @present_value_of_residual).round(2)
-  @margin_of_saftey = (@market_value_of_company - @stock.price).round(2)
-  @margin_of_saftey_percent = ((@margin_of_saftey / @stock.price) * 100).round(2)
+  @present_value_of_residual = (@value_at_year_ten * discount_factor_at_year_ten)
+  @market_value_of_company = (discount_total_totals + @present_value_of_residual)
+  @margin_of_saftey = (@market_value_of_company - @stock.price)
+  @margin_of_saftey_percent = ((@margin_of_saftey / @stock.price) * 100)
   @buy_price  = @market_value_of_company * 75.percent
+
+  @difference = (((@market_value_of_company -@stock.price) / @stock.price) * 100)
+ 
+ if @stock.update_attributes(:difference => @difference, 
+                             :market_value => @market_value_of_company)
+   flash[:notice] = "Saved :market_value and :difference to db."
+   #binding.pry
+  else
+   flash[:alert] = ":market_value and :difference have not been updated."
+  end
+
  end
 end

@@ -1,11 +1,6 @@
+require 'ext/numeric'
 class ApplicationController < ActionController::Base
   protect_from_forgery
-
- class Numeric
-  def percent
-   self / 100.0
-  end
- end
 
 module Calc
     def future_value(amount, rate = 0.06, timeframe = 1)

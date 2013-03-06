@@ -4,9 +4,28 @@ class ProjectedEarningsController < ApplicationController
 
 include Calc
 
+def new
+  @projected_earning = ProjectedEarning.new
+  flash[:notice] = "New Projected Earnings have been created. Params: #{params} @projected_earnings: #{@projected_earning.inspect}"
+
+end
+
+def create 
+  @projected_earning = ProjectedEarning.new
+
+  if @projected_earning.save(params[:id])
+    flash[:notice] = "New Projected Earnings have been created. Params: #{params} @projected_earnings: #{@projected_earning.inspect}"
+   #redirect_to @stock
+  else
+   flash[:alert] = "Projected Earnings have not been updated."
+   #render :action => "edit"
+  end
+end
+
  def show
   @stock = Stock.find(params[:stock_id])
   @real_earnings = @stock.earnings(params[:id])
+
   @total_projected_eps = 0
   @projected_eps = [0..10]
   @eps = @stock.price / @stock.pe
@@ -39,6 +58,15 @@ include Calc
 #Highest price you can pay to get 15% return 
 @highest_price_to_get15percent_return = present_value(@total_return,15,10)
 
-end
+@dollar_difference = (@highest_price_to_get15percent_return - @stock.price)
+
+  if @stock.update_attributes(:dollar_difference => @dollar_difference, 
+                              :buy_at => @highest_price_to_get15percent_return)
+   flash[:notice] = "Saved :buy_at and :dollar_difference to db."
+   #binding.pry
+  else
+   flash[:alert] = ":buy_at and :dollar_difference have not been updated."
+  end
+ end
 
 end

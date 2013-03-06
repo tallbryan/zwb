@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130302063320) do
+ActiveRecord::Schema.define(:version => 20130306061721) do
 
   create_table "discount_cash_flows", :force => true do |t|
     t.integer  "year"
@@ -63,10 +63,14 @@ ActiveRecord::Schema.define(:version => 20130302063320) do
     t.float    "price"
     t.float    "pe"
     t.float    "div"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
     t.float    "guess_growth"
     t.float    "ten_year_growth"
+    t.decimal  "buy_at"
+    t.decimal  "dollar_difference"
+    t.decimal  "difference"
+    t.decimal  "market_value"
   end
 
 end
