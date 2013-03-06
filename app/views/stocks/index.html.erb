@@ -17,14 +17,14 @@
 
 <tr>
 	<td><%= link_to stock.name, stock%></td>
-	<td><%= stock.symbol.upcase%></td>
-	<td>descsion</td>
-	<td>max price</td>
-	<td><%= stock.price%></td>
+	<td><%= stock.symbol.upcase %></td>
+	<td><b> <%= stock.buy_decision %></b> </td>
+	<td>$ <%= if stock.buy_decision != nil; stock.market_value.round(2) end%></td>
+	<td>$ <%= stock.price%></td>
 	<td><%= stock.pe%></td>
 	<td><%= stock.div%></td>
-	<td><%= stock.guess_growth%></td>
-	<td><%= stock.ten_year_growth%></td>	
+	<td><%= stock.guess_growth%>%</td>
+	<td><%= stock.ten_year_growth%>%</td>	
 </tr>
 <% end %>
 </table>

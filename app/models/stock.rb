@@ -1,7 +1,8 @@
 class Stock < ActiveRecord::Base
   attr_accessible :ten_year_growth, :guess_growth, :div, :name, 
                   :pe, :price, :symbol, :earnings_attributes, :earning,
-                  :buy_at, :dollar_difference, :difference, :market_value
+                  :buy_at, :dollar_difference, :difference, :market_value,
+                  :buy_decision
 
   validates :div, :name, :pe, :price, :symbol, :presence => true
 

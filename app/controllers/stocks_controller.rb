@@ -25,17 +25,17 @@ class StocksController < ApplicationController
        qt.to_s
        @stocks.each do |s|  
          if s.symbol.upcase == qt.symbol.upcase then 
-         stock = Stock.find(s.id)
-          if stock.update_attributes(:price => qt.lastTrade, :pe => qt.peRatio, :div => qt.dividendYield )
-           flash[:notice] = "Will, your Stock has been updated."
-          else
-           flash[:alert] = "Will, your Stock has not been updated."
-          end
+           stock = Stock.find(s.id)
+            if stock.update_attributes(:price => qt.lastTrade, :pe => qt.peRatio, :div => qt.dividendYield )
+             flash[:notice] = "Will, your Stock has been updated."
+            else
+             flash[:alert] = "Will, your Stock has not been updated."
+            end
          end
        end 
      end
      #redirect_to stocks_path 
-  end
+  end 
  end
 
  def new

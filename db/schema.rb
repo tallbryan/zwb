@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130306061721) do
+ActiveRecord::Schema.define(:version => 20130306073945) do
 
   create_table "discount_cash_flows", :force => true do |t|
     t.integer  "year"
@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(:version => 20130306061721) do
     t.decimal  "dollar_difference"
     t.decimal  "difference"
     t.decimal  "market_value"
+    t.string   "buy_decision"
   end
 
 end
