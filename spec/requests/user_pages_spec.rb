@@ -136,10 +136,9 @@ describe "User pages" do
         click_button "Save changes"
       end
 
-      it { should have_selector('title', text: new_name) }
-      binding.pry
-      it { should have_selector('div.alert.alert-success') }
-      it { should have_link('Sign out', href: signout_path) }
+      it { should have_selector('title', text: new_name) }      
+      xit { should have_selector('div.alert.alert-success'  ) }
+      it { should have_link('Sign out') }
       specify { user.reload.name.should  == new_name }
       specify { user.reload.email.should == new_email }
     end
