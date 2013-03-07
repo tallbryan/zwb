@@ -28,7 +28,7 @@
     <td class="stocktable"><%= link_to "| Delete Stock |",
   stock_path(@stock),
   :method => :delete,
-  :confirm => "Hey Buddy!  Are you sure you want to delete this stock?"%></td> 
+  :confirm => "Are you sure you want to delete this stock?"%></td> 
     <td class="stocktable"><%= link_to "| Add Earnings |", new_stock_earning_path(@stock)  %> </td> 
     <td class="stocktable"><%= link_to "| Edit Earnings |", edit_stock_earning_path(@stock)%> </td> 
     <td class="stocktable"><%= link_to "| Cancel |", stocks_path, :method => "get" %> </td> 
@@ -40,7 +40,7 @@
 <%= form_for @stock do |f| %> 
  <%= f.error_messages %>
 
- <h2>Earnings</h2>
+ <h3>Earnings</h3>
 
 <table>
 <tr><td><b>Year</td><td><b>Earnings</td><td><b>PE</td><td><b>Div.</td><td><b>SH EQ</td><td><b>ID</td></tr>
