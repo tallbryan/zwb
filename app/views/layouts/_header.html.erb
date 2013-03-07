@@ -9,12 +9,12 @@
           <a class="brand" href= "/">ZWE</a>
           <div class="nav-collapse">
             <ul class="nav">
-      				<li><%= link_to "Home", root_path %></li>
+      				<!--li><%= link_to "Home", root_path %></li>
       				<li><%= link_to "About Us", '#' %></li>
       				<li><%= link_to "Stocks", '#' %></li>
-              <li><%= link_to "Contact Us", '#' %></li>
-              <li><%= link_to "Sign in", signin_path %></li>
-              <li><%= link_to "Users", users_path %></li>
+              <!--li><%= link_to "Contact Us", '#' %></li>
+              <!li><%= link_to "Sign in", signin_path %></li>
+              <!li><%= link_to "Users", users_path %></li--> 
 
               <% if signed_in? %>
 
@@ -33,7 +33,7 @@
               </ul>
             </li>
               <% else %>
-               <li><%= link_to "Sign in", signin_path %></li>
+               <li><!--%= link_to "Sign in", signin_path %></li-->
               <% end %>
           	</ul>
           </div>

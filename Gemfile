@@ -32,8 +32,8 @@ end
 
 group :test do
   gem 'capybara', '1.1.2'
-  gem 'factory_girl_rails', '4.1.0', :require => false
-  gem 'factory_girl'
+  #gem 'factory_girl_rails', '4.1.0', :require => false
+  gem 'factory_girl', '2.6.4'
   gem 'cucumber-rails', '1.2.1', :require => false
   gem 'database_cleaner', '0.7.0'
   # gem 'launchy', '2.1.0'
