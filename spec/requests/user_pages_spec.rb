@@ -137,6 +137,7 @@ describe "User pages" do
       end
 
       it { should have_selector('title', text: new_name) }
+      binding.pry
       it { should have_selector('div.alert.alert-success') }
       it { should have_link('Sign out', href: signout_path) }
       specify { user.reload.name.should  == new_name }

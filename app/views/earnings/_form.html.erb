@@ -7,32 +7,29 @@
 <tr>
   <td><b>Year</td><td><b>Earnings</td>
   <td><b>PE</td><td><b>Div.</td>
-  <td ><b>SH EQ</td><td><b>ID</td><td>Delete</td>
+  <td><b>SH EQ</td><td>Delete</td>
 </tr>
 
  <%= f.fields_for :earnings do |earning_fields| %>
 
   <tr>
   <td>
-    <%= earning_fields.text_field :year,  :size => 5 %>
+    <%= earning_fields.text_field :year  %>
   </td>
   <td>
-    <%= earning_fields.text_field :earnings,  :size => 5 %>
+    <%= earning_fields.text_field :earnings %>
   </td> 
   <td>
-    <%= earning_fields.text_field :pe, :size => 5 %>
+    <%= earning_fields.text_field :pe %>
   </td>
   <td>
-    <%= earning_fields.text_field :div, :size => 5 %>
+    <%= earning_fields.text_field :div  %>
   </td>
   <td>
-   <%= earning_fields.text_field :sheq, :size => 5 %>
+   <%= earning_fields.text_field :sheq %>
   </td>
   <td>
-    <%= earning_fields.text_field :id, :size => 5 %>
-  </td>
-  <td>
-    <%= earning_fields.check_box :_destroy, :size => 5 %>
+    <%= earning_fields.check_box :_destroy %>
   </td>
 </tr>
 <% end %>
