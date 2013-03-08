@@ -1,6 +1,10 @@
 <h2><%= @portfolio.name %> <h2>
-<%= @portfolio.stocks.each do |stock|%>
-	<h2><%= link_to stock.name, stock %><h2>
-<% end %>
-
-<%= link_to "Edit Portfolio", edit_portfolio_path(@portfolio) %>
+	<% @stocks = Stock.find :all %> 
+	<% @stocks.each do |stock| %>
+		<p>
+			<%= stock.name %>
+		</p>
+	<% end %>
+<p>
+	<%= link_to "Edit Portfolio", edit_portfolio_path(@portfolio) %>
+</p>

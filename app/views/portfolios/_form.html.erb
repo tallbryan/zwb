@@ -1,0 +1,17 @@
+<h2><%= @portfolio.name %> <h2>
+	<div id="contentBox" style="margin:0px auto; width:70%">
+
+<%#columns divs, float left, no margin so there is no space between column, width=1/2 %>
+<div id="column1" style="float:left; margin:0; width:33%;">
+ 	<%= @portfolio.collection.each do |stock|%>
+		<h2><%= link_to stock.name, stock %><h2>
+	<% end %>
+</div>
+
+<dif id="column2" style="float:left; margin:0;width:33%">
+	<%= semantic_form_for @portfolio do |f| %>
+		.
+		.
+		<%= f.input :stocks, :as => :select %>
+	<% end %>
+</div>

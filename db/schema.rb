@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130227042150) do
+ActiveRecord::Schema.define(:version => 20130304064118) do
 
   create_table "earnings", :force => true do |t|
     t.integer  "year"
@@ -25,6 +25,17 @@ ActiveRecord::Schema.define(:version => 20130227042150) do
   end
 
   add_index "earnings", ["stock_id"], :name => "index_earnings_on_stock_id"
+
+  create_table "portfolio_memberships", :force => true do |t|
+    t.integer  "portfolio_id"
+    t.integer  "stock_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "portfolio_memberships", ["portfolio_id", "stock_id"], :name => "index_portfolio_memberships_on_portfolio_id_and_stock_id", :unique => true
+  add_index "portfolio_memberships", ["portfolio_id"], :name => "index_portfolio_memberships_on_portfolio_id"
+  add_index "portfolio_memberships", ["stock_id"], :name => "index_portfolio_memberships_on_stock_id"
 
   create_table "portfolios", :force => true do |t|
     t.string   "name"
