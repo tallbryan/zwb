@@ -1,12 +1,12 @@
-<h2>Current Stock Data</h2>
+<h3>Stock List</h3>
 
 <table>
 <tr>
-	<td width="200"><b>Name</td>
+	<td width="100"><b>Name</td>
 	<td width="100"><b>Symbol</td>
-	<td width="100"><b>Price</td>
-	<td width="100"><b>PE</td>
-	<td width="100"><b>Div</td>
+	<td width="50"><b>Price</td>
+	<td width="50"><b>PE</td>
+	<td width="50"><b>Div</td>
 </tr>
 
 <% @stocks.each do |stock| %>
@@ -25,8 +25,9 @@
 </p>	
 <p>
 </p>
-<%= link_to "New Stock",  new_stock_path, :method => "get" %>
-<%= link_to "Update All Stocks", stocks_path(:update_all) %>
-<%= link_to "New Portfolio", new_portfolio_path %>
+
+<!--%= link_to "New Stock",  new_stock_path, :method => "get" %> <br>
+<%= link_to "Update All Stocks", stocks_path(:update_all) %><br>
+<%= link_to "New Portfolio", new_portfolio_path %><br-->
 
 
