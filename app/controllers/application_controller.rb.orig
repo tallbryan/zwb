@@ -1,0 +1,34 @@
+require 'ext/numeric'
+<<<<<<< .merge_file_BYD3lh
+
+class ApplicationController < ActionController::Base
+  protect_from_forgery
+  include SessionsHelper
+
+ module Calc
+=======
+class ApplicationController < ActionController::Base
+  protect_from_forgery
+
+module Calc
+>>>>>>> .merge_file_zuz7re
+    def future_value(amount, rate = 0.06, timeframe = 1)
+      round(BigDecimal.new((amount * (1 + rate.percent) ** timeframe).to_s))
+    end
+
+    def present_value(amount, rate = 0.06, timeframe = 1)
+      round(BigDecimal.new((amount / (1 + rate.percent) ** timeframe).to_s))
+    end
+
+    def round(amount, precision = 2)
+      amount.round(precision).to_f
+    end
+<<<<<<< .merge_file_BYD3lh
+ end 
+=======
+end
+
+
+ 
+>>>>>>> .merge_file_zuz7re
+end

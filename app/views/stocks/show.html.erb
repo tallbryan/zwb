@@ -20,6 +20,14 @@
   <td class="stocktable" width="150"><b>Div. Yield:  </b></td>
   <td class="stocktable" ><%= @stock.div     %></td>
 </tr>
+<tr>
+  <td class="stocktable" width="200"><h2>Guess Growth:  </h2></td>
+  <td class="stocktable" ><%= @stock.guess_growth    %></td>
+</tr>
+<tr>
+  <td class="stocktable" width="250"><h2>Ten Year Growth:  </h2></td>
+  <td class="stocktable" ><%= @stock.ten_year_growth    %></td>
+</tr>
 </table> 
 </br>
 <table class="stocktable">
@@ -39,29 +47,31 @@
 <%= form_for @stock do |f| %> 
  <%= f.error_messages %>
 
- <h3>Earnings</h3>
+ <h2>Earnings</h2>
 
 <table>
-<tr><td><b>Year</td><td><b>Earnings</td><td><b>PE</td><td><b>Div.</td><td><b>SH EQ</td></tr>
+<tr><td><b>Year</td><td><b>Earnings</td><td><b>PE</td><td><b>Div.</td><td><b>SH EQ</td><td><b>ID</td></tr>
 
   <%= f.fields_for :earnings do |earning_fields| %>
   <tr>
   <td>
-    <%= earning_fields.text_field :year   %>
+    <%= earning_fields.text_field :year,  :size => 5 %>
   </td>
   <td>
-    <%= earning_fields.text_field :earnings  %>
+    <%= earning_fields.text_field :earnings,  :size => 5 %>
   </td> 
   <td>
-    <%= earning_fields.text_field :pe %>
+    <%= earning_fields.text_field :pe, :size => 5 %>
   </td>
   <td>
-    <%= earning_fields.text_field :div %>
+    <%= earning_fields.text_field :div, :size => 5 %>
   </td>
   <td>
-   <%= earning_fields.text_field :sheq %>
+   <%= earning_fields.text_field :sheq, :size => 5 %>
   </td>
-  
+  <td>
+    <%= earning_fields.text_field :id, :size => 5 %>
+  </td>
 </tr>
 <% end %>
 </table>
