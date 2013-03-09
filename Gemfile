@@ -8,6 +8,7 @@ gem 'bootstrap-will_paginate', '0.0.6'
 gem 'jquery-rails', '2.0.2'
 gem 'yahoofinance', '1.2.2'
 gem 'dynamic_form', '1.1.4'
+gem 'simple_form'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'
