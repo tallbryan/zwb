@@ -1,9 +1,10 @@
 require 'ext/numeric'
 class ApplicationController < ActionController::Base
   protect_from_forgery
+<<<<<<< .merge_file_nApHyM
   include SessionsHelper
 end
-
+=======
 
 module Calc
     def future_value(amount, rate = 0.06, timeframe = 1)
@@ -22,3 +23,4 @@ end
 
  
 end
+>>>>>>> .merge_file_mKfBTL

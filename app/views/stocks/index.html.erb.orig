@@ -4,6 +4,11 @@
 <tr>
 	<td width="100"><b>Name</td>
 	<td width="100"><b>Symbol</td>
+<<<<<<< .merge_file_UASIOV
+	<td width="50"><b>Price</td>
+	<td width="50"><b>PE</td>
+	<td width="50"><b>Div</td>
+=======
 	<td width="100"><b>Descision</td>
 	<td width="100"><b>Max Price</td>
 	<td width="100"><b>Current Price</td>
@@ -11,6 +16,7 @@
 	<td width="100"><b>Div</td>
 	<td width="100"><b>Guess Growth %</td>
 	<td width="100"><b>Ten Year Growth %</td>
+>>>>>>> .merge_file_2OHIwS
 </tr>
 
 <% @stocks.each do |stock| %>

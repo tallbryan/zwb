@@ -1,0 +1,23 @@
+<%= @stock.name    %><br>
+EPS: <%= @eps.round(2) %> <br>
+<br>
+guess growth <%=@stock.guess_growth%>
+<br><br>
+<b>Discounted Owner's Cash Flow Using a Two-Stage "Dividend" Discount Model</b>
+<ul>
+<% @hash.each do |e| %>
+<li>Year <%= e %></li>
+<%end%>
+</ul>
+<br><br>
+<u>Residual Value</u>
+<br>
+  total_second_stage_growth: <%=@total_second_stage_growth.round(2)%><br>
+  capitization_rate: <%= @capitization_rate %><br>
+  value_at_year_ten: <%= @value_at_year_ten.round(2)%><br>
+  present_value_of_residual: <%=@present_value_of_residual.round(2) %><br>
+  market_value_of_company: <%=@market_value_of_company.round(2) %><br>
+ margin_of_saftey: <%=@margin_of_saftey.round(2) %><br>
+  margin_of_saftey_percent: <%=@margin_of_saftey_percent.round(2) %><br><br>
+  Max BUY Price: <%= @buy_price.round(2) %><br>
+   Difference: <%= @difference.round(2) %><br>

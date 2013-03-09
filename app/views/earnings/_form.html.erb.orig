@@ -1,17 +1,18 @@
 <%= form_for (@stock) do |f| %> 
  <%= f.error_messages %>
 
- <h2><%= @stock.symbol %></h2>
-
  <table>
 <tr>
   <td><b>Year</td><td><b>Earnings</td>
   <td><b>PE</td><td><b>Div.</td>
+<<<<<<< .merge_file_plP9GN
+  <td><b>SH EQ</td><td><b>Delete</b></td>
+=======
   <td ><b>SH EQ</td><td>Delete</td>
+>>>>>>> .merge_file_Kvc3nN
 </tr>
 
  <%= f.fields_for :earnings do |earning_fields| %>
-
   <tr>
   <td> 
     <%= earning_fields.text_field :year  %>
@@ -29,7 +30,11 @@
    <%= earning_fields.text_field :sheq %>
   </td>
   <td>
+<<<<<<< .merge_file_plP9GN
     <%= earning_fields.check_box :_destroy %>
+=======
+    <%= earning_fields.check_box :_destroy, :size => 5 %>
+>>>>>>> .merge_file_Kvc3nN
   </td>
 </tr>
 <% end %>

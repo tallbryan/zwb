@@ -2,26 +2,34 @@
 
  <%= f.error_messages %>
 
-  <%= f.label :name %>
+  <%= f.label :name %><br />
   <%= f.text_field :name %>
    </p>
    <p>
-  <%= f.label :symbol %>
+  <%= f.label :symbol %><br />
   <%= f.text_field :symbol %>
    </p>
    <p>
-  <%= f.label :price %>
+  <%= f.label :price %><br />
   <%= f.text_field :price %>
    </p>
    <p>
-  <%= f.label :pe %>
+  <%= f.label :pe %><br />
   <%= f.text_field :pe %>
    </p>
    <p>
-  <%= f.label :div %>
+  <%= f.label :div %><br />
   <%= f.text_field :div %>
    </p>
    <p>
-  <%= f.submit %>
- 
+    <%= f.label :guess_growth %><br />
+    <%= f.text_field :guess_growth %>
+   </p>
+   <p>
+    <%= f.label :ten_year_growth %><br />
+    <%= f.text_field :ten_year_growth %>
+   </p>
+   <p>
+    <%= f.submit %>
+  
  <% end %>
