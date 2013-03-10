@@ -15,11 +15,12 @@ feature 'Editing Earnings' do
     click_link 'Advanced Mirco Devices'  
     page.should have_content('Earnings') 
  	click_link 'Add Earnings'
- 	fill_in 'stock_earnings_attributes_0_year', :with => '2002'
-    fill_in 'stock_earnings_attributes_0_earnings', :with => '2.50'
-    fill_in 'stock_earnings_attributes_0_sheq', :with => '200'
-    fill_in 'stock_earnings_attributes_0_pe', :with => '120'
-    fill_in 'stock_earnings_attributes_0_div', :with => '2.23'
+ 	0.upto(9) do |n|
+      fill_in 'stock_earnings_attributes_'+n.to_s+'_earnings', :with => '2.5'+n.to_s
+      fill_in 'stock_earnings_attributes_'+n.to_s+'_sheq', :with => '20'+n.to_s
+      fill_in 'stock_earnings_attributes_'+n.to_s+'_pe', :with => '12'+n.to_s
+      fill_in 'stock_earnings_attributes_'+n.to_s+'_div', :with => '2.2'+n.to_s
+      end
     click_button "Update Earnings"
     page.should have_content("Stock has been updated.")
  end
@@ -30,11 +31,12 @@ scenario "can edit earnings for a stock" do
  	page.should have_content('Earnings')
     click_link '| Edit Earnings |'
     page.should have_content('Edit Earnings')
- 	fill_in 'stock_earnings_attributes_0_year', :with => '2003'
-    fill_in 'stock_earnings_attributes_0_earnings', :with => '3.50'
-    fill_in 'stock_earnings_attributes_0_sheq', :with => '300'
-    fill_in 'stock_earnings_attributes_0_pe', :with => '320'
-    fill_in 'stock_earnings_attributes_0_div', :with => '3.23'
+ 	0.upto(9) do |n|
+      fill_in 'stock_earnings_attributes_'+n.to_s+'_earnings', :with => '2.5'+(1+n).to_s
+      fill_in 'stock_earnings_attributes_'+n.to_s+'_sheq', :with => '20'+(1+n).to_s
+      fill_in 'stock_earnings_attributes_'+n.to_s+'_pe', :with => '12'+(1+n).to_s
+      fill_in 'stock_earnings_attributes_'+n.to_s+'_div', :with => '2.2'+(1+n).to_s
+      end
  	click_button "Update Earnings"
  	page.should have_content("Stock has been updated.")
  end
