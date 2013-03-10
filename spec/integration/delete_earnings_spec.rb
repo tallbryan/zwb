@@ -16,12 +16,14 @@ require 'spec_helper'
       click_link 'Advanced Mirco Devices'  
       page.should have_content('Earnings') 
       click_link' Add Earnings '
-      fill_in 'stock_earnings_attributes_0_year', :with => '2002'
-      fill_in 'stock_earnings_attributes_0_earnings', :with => '2.50'
-      fill_in 'stock_earnings_attributes_0_sheq', :with => '200'
-      fill_in 'stock_earnings_attributes_0_pe', :with => '120'
-      fill_in 'stock_earnings_attributes_0_div', :with => '2.23'
+      0.upto(9) do |n|
+      fill_in 'stock_earnings_attributes_'+n.to_s+'_earnings', :with => '2.5'+n.to_s
+      fill_in 'stock_earnings_attributes_'+n.to_s+'_sheq', :with => '20'+n.to_s
+      fill_in 'stock_earnings_attributes_'+n.to_s+'_pe', :with => '12'+n.to_s
+      fill_in 'stock_earnings_attributes_'+n.to_s+'_div', :with => '2.2'+n.to_s
+      end
       click_button "Update Earnings"
+      binding.pry
       page.should have_content("Stock has been updated.")
       end
 
