@@ -3,4 +3,6 @@ class Earning < ActiveRecord::Base
   validates :div, :earnings, :pe, :sheq, :year, :presence => true
   attr_accessible :div, :earnings, :pe, :sheq, :year
   
+  #DiscountCashFlowsController.show
+  #ProjectedEarningsController.show
 end

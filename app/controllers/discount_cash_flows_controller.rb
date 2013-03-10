@@ -34,6 +34,7 @@ include Calc
    end
 
   residual_values
+  redirect_to @stock
 
  end
 

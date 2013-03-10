@@ -21,11 +21,11 @@
   <td class="stocktable" ><%= @stock.div     %></td>
 </tr>
 <tr>
-  <td class="stocktable" width="200"><h2>Guess Growth:  </h2></td>
+  <td class="stocktable" width="200"><b>Guess Growth:  </b></td>
   <td class="stocktable" ><%= @stock.guess_growth    %></td>
 </tr>
 <tr>
-  <td class="stocktable" width="250"><h2>Ten Year Growth:  </h2></td>
+  <td class="stocktable" width="250"><b>Ten Year Growth:  </b></td>
   <td class="stocktable" ><%= @stock.ten_year_growth    %></td>
 </tr>
 </table> 
@@ -37,10 +37,16 @@
   stock_path(@stock),
   :method => :delete,
   :confirm => "Hey Buddy!  Are you sure you want to delete this stock?"%></td> 
+   <tr>
+    </tr>
     <td class="stocktable"><%= link_to "| Add Earnings |", new_stock_earning_path(@stock)  %> </td> 
-    <td class="stocktable"><%= link_to "| Edit Earnings |", edit_stock_earning_path(@stock)%> </td> 
-    <td class="stocktable"><%= link_to "| Cancel |", stocks_path, :method => "get" %> </td> 
+    <td class="stocktable"><%= link_to "| Edit Earnings |", edit_stock_earning_path(@stock)%> </td>
+
   </tr>
+  <tr>
+    <td class="stocktable"><%= link_to "| Calculate Projected Earnings |", stock_projected_earning_path(@stock)  %> </td> 
+    <td class="stocktable"><%= link_to "| Calculate Discount Cash Flows |", stock_discount_cash_flow_path(@stock)%> </td>
+    </tr>
 </table>
 
 </br>
