@@ -9,7 +9,9 @@ class PortfoliosController < ApplicationController
       flash[:notice] = "Your portfolio has been created'"
       redirect_to @portfolio
     else
-      #nothing, yet
+      render 'new'
+      flash[:notice] = "Nane can't be blanck"      
+      # I think add this to make the test pass
     end
   end
   
