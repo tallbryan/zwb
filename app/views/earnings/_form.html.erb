@@ -1,17 +1,20 @@
 <%= form_for (@stock) do |f| %> 
  <%= f.error_messages %>
 
+
+
  <table>
 <tr>
   <td><b>Year</td><td><b>Earnings</td>
   <td><b>PE</td><td><b>Div.</td>
-  <td><b>SH EQ</td><td><b>Delete</b></td>
+  <td ><b>SH EQ</td><td>Delete</td>
 </tr>
 
  <%= f.fields_for :earnings do |earning_fields| %>
+
   <tr>
   <td> 
-    <%= earning_fields.text_field :year  %>
+    <%= earning_fields.text_field :year %>
   </td>
   <td>
     <%= earning_fields.text_field :earnings %>
@@ -33,5 +36,5 @@
 </table>
   <%= f.submit value = "Update Earnings" %></br>
  </p>
-<%= link_to "Home", stocks_path %>
+
 <% end %>

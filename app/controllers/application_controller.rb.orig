@@ -1,10 +1,17 @@
 require 'ext/numeric'
+<<<<<<< HEAD
+class ApplicationController < ActionController::Base
+  protect_from_forgery
+
+module Calc
+=======
 
 class ApplicationController < ActionController::Base
   protect_from_forgery
   include SessionsHelper
 
  module Calc
+>>>>>>> master
     def future_value(amount, rate = 0.06, timeframe = 1)
       round(BigDecimal.new((amount * (1 + rate.percent) ** timeframe).to_s))
     end
@@ -16,5 +23,12 @@ class ApplicationController < ActionController::Base
     def round(amount, precision = 2)
       amount.round(precision).to_f
     end
+<<<<<<< HEAD
+end
+
+
+ 
+=======
  end 
+>>>>>>> master
 end

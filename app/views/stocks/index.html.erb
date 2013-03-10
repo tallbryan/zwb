@@ -2,21 +2,29 @@
 
 <table>
 <tr>
-	<td width="100"><b>Name</td>
+	<td width="200"><b>Name</td>
 	<td width="100"><b>Symbol</td>
-	<td width="50"><b>Price</td>
-	<td width="50"><b>PE</td>
-	<td width="50"><b>Div</td>
+	<td width="100"><b>Decision</td>
+	<td width="100"><b>Max Price</td>
+	<td width="100"><b>Current Price</td>
+	<td width="100"><b>PE</td>
+	<td width="100"><b>Div</td>
+	<td width="100"><b>Guess Growth %</td>
+	<td width="100"><b>Ten Year Growth %</td>
 </tr>
 
 <% @stocks.each do |stock| %>
 
 <tr>
 	<td><%= link_to stock.name, stock%></td>
-	<td><%= stock.symbol.upcase%></td>
-	<td><%= stock.price%></td>
+	<td><%= stock.symbol.upcase %></td>
+	<td style= "color:#FF0000" ><b> <%= stock.buy_decision %></b> </td>
+	<td  >$ <%= if stock.buy_decision != nil; stock.market_value.round(2) end%></td>
+	<td>$ <%= stock.price%></td>
 	<td><%= stock.pe%></td>
-	<td><%= stock.div%></td>	
+	<td><%= stock.div%></td>
+	<td><%= stock.guess_growth%>%</td>
+	<td><%= stock.ten_year_growth%>%</td>	
 </tr>
 <% end %>
 </table>

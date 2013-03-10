@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -13,14 +12,32 @@
 
 ActiveRecord::Schema.define(:version => 20130309114400) do
 
+  create_table "projected_earnings", :force => true do |t|
+    t.float    "earnings"
+    t.float    "ave_pe"
+    t.integer  "year"
+    t.integer  "stock_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "projected_earnings", ["stock_id"], :name => "index_projected_earnings_on_stock_id"
+
   create_table "stocks", :force => true do |t|
     t.string   "name"
     t.string   "symbol"
     t.float    "price"
     t.float    "pe"
     t.float    "div"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.float    "guess_growth"
+    t.float    "ten_year_growth"
+    t.decimal  "buy_at"
+    t.decimal  "dollar_difference"
+    t.decimal  "difference"
+    t.decimal  "market_value"
+    t.string   "buy_decision"
   end
 
   create_table "users", :force => true do |t|
