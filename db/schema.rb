@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,6 +12,39 @@
 # It's strongly recommended to check this file into your version control system.
 
 ActiveRecord::Schema.define(:version => 20130309114400) do
+
+  create_table "discount_cash_flows", :force => true do |t|
+    t.integer  "year"
+    t.float    "prev_cash_flow"
+    t.float    "growth_rate"
+    t.float    "cash_flow"
+    t.float    "discount_factor"
+    t.float    "total"
+    t.integer  "stock_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "discount_cash_flows", ["stock_id"], :name => "index_discount_cash_flows_on_stock_id"
+
+  create_table "earnings", :force => true do |t|
+    t.integer  "year"
+    t.float    "pe"
+    t.float    "div"
+    t.float    "sheq"
+    t.float    "earnings"
+    t.integer  "stock_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "earnings", ["stock_id"], :name => "index_earnings_on_stock_id"
+
+  create_table "portfolios", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "projected_earnings", :force => true do |t|
     t.float    "earnings"
