@@ -1,8 +1,8 @@
 <h2><%= @portfolio.name %> <h2>
-	<% @stocks = Stock.find :all %> 
-	<% @stocks.each do |stock| %>
+	<% stocks = @portfolio.stocks %> 
+	<% stocks.each do |s| %>
 		<p>
-			<%= stock.name %>
+			<%= s.name %>
 		</p>
 	<% end %>
 <p>

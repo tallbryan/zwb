@@ -1,17 +1,23 @@
 <h2><%= @portfolio.name %> <h2>
+	<% p_stocks = @portfolio.stocks%>
 	<div id="contentBox" style="margin:0px auto; width:70%">
 
 <%#columns divs, float left, no margin so there is no space between column, width=1/2 %>
 <div id="column1" style="float:left; margin:0; width:33%;">
- 	<%= @portfolio.collection.each do |stock|%>
-		<h2><%= link_to stock.name, stock %><h2>
+ 	<% p_stocks.each do |stock|%>
+		<p><font size = "4"><%= link_to stock.name, stock %></font></p>
 	<% end %>
 </div>
 
-<dif id="column2" style="float:left; margin:0;width:33%">
-	<%= semantic_form_for @portfolio do |f| %>
-		.
-		.
-		<%= f.input :stocks, :as => :select %>
-	<% end %>
+<div id="column2" style="float:left; margin:0;width:33%">
+	<div class="field">
+		<%= form_for @portfolio do |f| %>
+			<% Stock.all.each do |stock| %>
+			 	<%= check_box_tag "portfolio[stock_ids][]", stock.id, @portfolio.stock_ids.include?(stock.id), id: dom_id(stock) %>
+			 	<%= label_tag dom_id(stock), stock.name %><br>
+			<% end %>
+			<%= f.submit %>
+		<% end %>
+
+	</div>
 </div>

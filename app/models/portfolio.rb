@@ -1,9 +1,12 @@
 class Portfolio < ActiveRecord::Base
-  attr_accessible :name
+  attr_accessible :name, :stock_ids, :portfolio_ids
+
+
   validates :name, :presence => true
 
-  has_many :porfolio_memberships
-  has_many :stocks, :through => :porfolio_memberships
+  has_many :memberships
+  has_many :stocks, :through => :memberships
 
-  accepts_nested_attributes_for :stocks
+  #accepts_nested_attributes_for :memberships
+  #accepts_nested_attributes_for :stocks
 end

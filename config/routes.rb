@@ -17,6 +17,7 @@ Zwb::Application.routes.draw do
   end
   
   resources :portfolios do
+      resources :stocks
   end
   # Sample resource route with options:
   #   resources :products do

@@ -8,3 +8,5 @@ Stock.create(:name => "Honeywell", :pe => "1", :price => "2.00", :div => "23",
  						:symbol => "HNY")
 Stock.create(:name => "Amoco", :pe => "1", :price => "2.00", :div => "23", 
  						:symbol => "AMCO")
+
+Portfolio.create(:name => "Celery Muncher")

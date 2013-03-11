@@ -39,6 +39,7 @@ gem 'yahoofinance', '1.2.2'
 group :development, :test do
   gem 'rspec-rails', '~> 2.11'
   gem 'pry', '0.9.12'
+  gem 'simple_form'
 end
 
 group :test do
@@ -49,5 +50,5 @@ group :test do
 end
 
 group :production do
-
+  gem 'simple_form'
 end

@@ -23,7 +23,8 @@ class PortfoliosController < ApplicationController
   
   def update
     @portfolio = Portfolio.find(params[:id])
-    @stocks = Stock.all
+    @portfolio.update_attributes(params[:portfolio])
+    @portfolio.save
   end
 
   def edit
