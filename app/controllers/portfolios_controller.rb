@@ -1,8 +1,16 @@
 class PortfoliosController < ApplicationController
+  def index
+    @portfolios = Portfolio.all
+  end
+
   def new
     @portfolio = Portfolio.new
   end
-  
+
+  def show
+    @portfolio = Portfolio.find(params[:id])
+  end
+
   def create
     @portfolio = Portfolio.new (params[:portfolio])
     if @portfolio.save
@@ -15,7 +23,14 @@ class PortfoliosController < ApplicationController
     end
   end
   
-  def show
+  def update
     @portfolio = Portfolio.find(params[:id])
+    @portfolio.update_attributes(params[:portfolio])
+    @portfolio.save
+  end
+
+  def edit
+    @portfolio = Portfolio.find(params[:id])
+    @stocks = Stock.all
   end
 end

@@ -48,6 +48,7 @@ class StocksController < ApplicationController
  end
 
  def update
+  binding.pry
   @stock = Stock.find(params[:id])
   if @stock.update_attributes(params[:stock])
    flash[:notice] = "Stock has been updated."

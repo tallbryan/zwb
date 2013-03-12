@@ -7,7 +7,8 @@
           <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "New Stock",  new_stock_path, :method => "get" %></li>
           <li><%= link_to "Update All Stocks", stocks_path(:update_all) %></li>
-          <li><%= link_to "New Portfolio", new_portfolio_path %></li>    
+          <li><%= link_to "New Portfolio", new_portfolio_path %></li> 
+          <li><%= link_to "Portfolios", portfolios_path %></li>    
           <% if signed_in? %>
             <li><%= link_to "Users", users_path %></li>
             <li id="fat-menu" class="dropdown">

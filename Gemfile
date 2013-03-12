@@ -17,6 +17,7 @@ group :development, :test do
   gem 'spork', '0.9.2'
   gem 'pry-rails'
   gem 'hirb'
+  gem 'simple_form'
 end
 
 # Bundle edge Rails instead:
@@ -46,3 +47,4 @@ group :test do
   # gem 'rb-fsevent', '0.9.1', :require => false
   # gem 'growl', '1.0.3'
 end
+

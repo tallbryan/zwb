@@ -40,6 +40,13 @@ ActiveRecord::Schema.define(:version => 20130309114400) do
 
   add_index "earnings", ["stock_id"], :name => "index_earnings_on_stock_id"
 
+  create_table "memberships", :id => false, :force => true do |t|
+    t.integer "portfolio_id", :null => false
+    t.integer "stock_id",     :null => false
+  end
+
+  add_index "memberships", ["portfolio_id", "stock_id"], :name => "index_memberships_on_portfolio_id_and_stock_id"
+
   create_table "portfolios", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
@@ -65,6 +72,7 @@ ActiveRecord::Schema.define(:version => 20130309114400) do
     t.float    "div"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+    t.integer  "portfolio_id"
     t.float    "guess_growth"
     t.float    "ten_year_growth"
     t.decimal  "buy_at"
