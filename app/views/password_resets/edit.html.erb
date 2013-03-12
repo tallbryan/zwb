@@ -1,5 +1,7 @@
+<div class="page-header">
 <h1>Reset Password</h1>
-
+</div>
+<div class="pull-left">
 <%= form_for @user, :url => password_reset_path(params[:id]) do |f| %>
   <% if @user.errors.any? %>
     <div class="error_messages">
@@ -19,5 +21,7 @@
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation %>
   </div>
-  <div class="actions"><%= f.submit "Update Password" %></div>
+  
+  <div class="actions"><%= f.submit "Update Password", class: "btn btn-large btn-primary" %></div>
 <% end %>
+</div>
