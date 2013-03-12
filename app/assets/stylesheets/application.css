@@ -11,7 +11,9 @@
  *= require_self
  *= require_tree .
  */
-
+body {
+  background-color: #FFF;
+}
 
 h2 {
   font-size: 1.7em;
@@ -22,16 +24,19 @@ h2 {
   color: #999;
 }
 
-h1 {
-  font-size: 36px;
-  color: #00C;
-  text-align: left;
-}
 
+
+td, th {
+  font-size: 1.5em !important; 
+  padding-right: 30px;
+}
 
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
+  color: #00C;
   margin-bottom: 30px;
   text-align: center;
 }
+
+
