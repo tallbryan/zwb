@@ -1,7 +1,0 @@
-<<<<<<< HEAD
-<%= render "form" %>
-=======
-<div class="pull-left">
-<% render "form" %>
-</div>
->>>>>>> 368851213b9b5a25e43d877a2b0c947094420c86

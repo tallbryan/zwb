@@ -72,7 +72,6 @@ ActiveRecord::Schema.define(:version => 20130309114400) do
     t.float    "div"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
-    t.integer  "portfolio_id"
     t.float    "guess_growth"
     t.float    "ten_year_growth"
     t.decimal  "buy_at"
@@ -80,6 +79,7 @@ ActiveRecord::Schema.define(:version => 20130309114400) do
     t.decimal  "difference"
     t.decimal  "market_value"
     t.string   "buy_decision"
+    t.integer  "portfolio_id"
   end
 
   create_table "users", :force => true do |t|
