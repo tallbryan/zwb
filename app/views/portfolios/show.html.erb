@@ -1,1 +1,10 @@
 <h2><%= @portfolio.name %> <h2>
+	<% stocks = @portfolio.stocks %> 
+	<% stocks.each do |s| %>
+		<p>
+			<%= s.name %>
+		</p>
+	<% end %>
+<p>
+	<%= link_to "Edit Portfolio", edit_portfolio_path(@portfolio) %>
+</p>

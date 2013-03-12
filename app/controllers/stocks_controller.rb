@@ -27,9 +27,9 @@ class StocksController < ApplicationController
          if s.symbol.upcase == qt.symbol.upcase then 
            stock = Stock.find(s.id)
             if stock.update_attributes(:price => qt.lastTrade, :pe => qt.peRatio, :div => qt.dividendYield )
-             flash[:notice] = "Will, your Stock has been updated."
+             flash[:notice] = "Your stock has been updated."
             else
-             flash[:alert] = "Will, your Stock has not been updated."
+             flash[:alert] = "Your stock has not been updated."
             end
          end
        end 
@@ -48,6 +48,7 @@ class StocksController < ApplicationController
  end
 
  def update
+  binding.pry
   @stock = Stock.find(params[:id])
   if @stock.update_attributes(params[:stock])
    flash[:notice] = "Stock has been updated."

@@ -1,36 +1,31 @@
-<h2>Add New Stock Info</h2>
+
+<div class="pull-left">
  <%= form_for(@stock) do |f| %> 
 
  <%= f.error_messages %>
 
-  <%= f.label :name %><br />
+  <%= f.label :name %>
   <%= f.text_field :name %>
-   </p>
-   <p>
-  <%= f.label :symbol %><br />
+ 
+  <%= f.label :symbol %>
   <%= f.text_field :symbol %>
-   </p>
-   <p>
-  <%= f.label :price %><br />
+
+  <%= f.label :price %>
   <%= f.text_field :price %>
-   </p>
-   <p>
-  <%= f.label :pe %><br />
+
+  <%= f.label :pe %>
   <%= f.text_field :pe %>
-   </p>
-   <p>
-  <%= f.label :div %><br />
+
+  <%= f.label :div %>
   <%= f.text_field :div %>
-   </p>
-   <p>
-    <%= f.label :guess_growth %><br />
+
+    <%= f.label :guess_growth %>
     <%= f.text_field :guess_growth %>
-   </p>
-   <p>
-    <%= f.label :ten_year_growth %><br />
-    <%= f.text_field :ten_year_growth %>
-   </p>
-   <p>
-    <%= f.submit %>
+
+    <%= f.label :ten_year_growth %>
+    <%= f.text_field :ten_year_growth %><br>
+
+    <%= f.submit "Create Stock", class: "btn btn-large btn-primary"%>
   
  <% end %>
+</div>

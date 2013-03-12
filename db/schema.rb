@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130306073945) do
+ActiveRecord::Schema.define(:version => 20130309114400) do
 
   create_table "discount_cash_flows", :force => true do |t|
     t.integer  "year"
@@ -40,6 +40,13 @@ ActiveRecord::Schema.define(:version => 20130306073945) do
 
   add_index "earnings", ["stock_id"], :name => "index_earnings_on_stock_id"
 
+  create_table "memberships", :id => false, :force => true do |t|
+    t.integer "portfolio_id", :null => false
+    t.integer "stock_id",     :null => false
+  end
+
+  add_index "memberships", ["portfolio_id", "stock_id"], :name => "index_memberships_on_portfolio_id_and_stock_id"
+
   create_table "portfolios", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
@@ -65,6 +72,7 @@ ActiveRecord::Schema.define(:version => 20130306073945) do
     t.float    "div"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+    t.integer  "portfolio_id"
     t.float    "guess_growth"
     t.float    "ten_year_growth"
     t.decimal  "buy_at"
@@ -77,11 +85,13 @@ ActiveRecord::Schema.define(:version => 20130306073945) do
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "email"
-    t.datetime "created_at",                         :null => false
-    t.datetime "updated_at",                         :null => false
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
     t.string   "password_digest"
     t.string   "remember_token"
-    t.boolean  "admin",           :default => false
+    t.boolean  "admin",                  :default => false
+    t.string   "password_reset_token"
+    t.datetime "password_reset_sent_at"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

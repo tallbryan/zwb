@@ -1,4 +1,10 @@
-<h3>Stock List</h3>
+<% provide(:title, 'Stock List') %>
+<div class="page-header">
+
+</div>
+
+<div class="pull-left">
+<h2>Stock List</h2>
 
 <table>
 <tr>
@@ -28,14 +34,17 @@
 </tr>
 <% end %>
 </table>
-
 <p>
 </p>	
 <p>
 </p>
+</div>
+
 
 <!--%= link_to "New Stock",  new_stock_path, :method => "get" %> <br>
 <%= link_to "Update All Stocks", stocks_path(:update_all) %><br>
 <%= link_to "New Portfolio", new_portfolio_path %><br-->
+
+
 
 

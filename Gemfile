@@ -8,6 +8,7 @@ gem 'bootstrap-will_paginate', '0.0.6'
 gem 'jquery-rails', '2.0.2'
 gem 'yahoofinance', '1.2.2'
 gem 'dynamic_form', '1.1.4'
+gem 'simple_form'
 
 group :development, :test do
   gem 'rspec-rails', '2.11.0'
@@ -16,6 +17,7 @@ group :development, :test do
   gem 'spork', '0.9.2'
   gem 'pry-rails'
   gem 'hirb'
+  gem 'simple_form'
 end
 
 # Bundle edge Rails instead:
@@ -45,3 +47,4 @@ group :test do
   # gem 'rb-fsevent', '0.9.1', :require => false
   # gem 'growl', '1.0.3'
 end
+
