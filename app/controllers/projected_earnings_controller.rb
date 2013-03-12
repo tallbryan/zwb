@@ -46,7 +46,7 @@ include Calc
    end
 
    make_buy_decision
-   redirect_to @stock
+   #redirect_to @stock
 
  end
  
