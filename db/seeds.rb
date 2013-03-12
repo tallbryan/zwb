@@ -14,7 +14,7 @@ def add_earnings_to_stock(stock, hist_earnings, hist_pe, hist_div, hist_sheq)
   end
 end
 
-@abt = Stock.create(:name => "Abbott Labs", :pe => "20.1", :price => "39.10", :div => "1.95", 
+@abt = Stock.create(:name => "Abbott Labs", :pe => "20.1", :price => 39.10, :div => "1.95", 
 					:symbol => "ABT",:guess_growth => "10", :ten_year_growth => "12" )
 
 abt_hist_earnings = [0.85,0.94,1.06,1.21,1.34,1.51,1.66,1.78,1.88,2.06]

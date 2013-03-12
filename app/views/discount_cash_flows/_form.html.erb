@@ -1,26 +1,42 @@
 <div class="pull-left">
-
-<%= @stock.name    %><br>
-EPS: <%= @eps.round(2) %> <br>
-<br>
-guess growth <%=@stock.guess_growth%>
+<h3>Discount Cash Flows for <%= @stock.symbol %></h3><br>
+Stock EPS:   $<%= @eps.round(2) %> <br>
+Guess growth rate: <%=@stock.guess_growth%>%
 <br><br>
 <b>Discounted Owner's Cash Flow Using a Two-Stage "Dividend" Discount Model</b>
-<ul>
-<% @hash.each do |e| %>
-<li>Year <%= e %></li>
-<%end%>
-</ul>
-<br><br>
-<u>Residual Value</u>
 <br>
-  total_second_stage_growth: <%=@total_second_stage_growth.round(2)%><br>
-  capitization_rate: <%= @capitization_rate %><br>
-  value_at_year_ten: <%= @value_at_year_ten.round(2)%><br>
-  present_value_of_residual: <%=@present_value_of_residual.round(2) %><br>
-  market_value_of_company: <%=@market_value_of_company.round(2) %><br>
- margin_of_saftey: <%=@margin_of_saftey.round(2) %><br>
-  margin_of_saftey_percent: <%=@margin_of_saftey_percent.round(2) %><br><br>
-  Max BUY Price: <%= @buy_price.round(2) %><br>
-   Difference: <%= @difference.round(2) %><br>
+
+<table border="0">
+	<tr><td width="50"><b>Year</td>
+	<td width="200"><b>Prior years Cash Flow</td>
+	<td width="150"><b>Growth Rate</td>
+	<td width="150"><b>Cash Flow</td>
+	<td width="150"><b>Discount Factor</td>
+	<td width="50"><b>Total</b></td></b></tr>
+
+<% @hash.each_with_index do |e, i| %>
+
+<tr><td><%= i+1 %></td>
+	<td>$<%= e[1][0] %></td>
+	<td><%= e[1][1] %>%</td>
+	<td>$<%= e[1][2] %></td>
+	<td><%= e[1][3] %></td>
+	<td>$<%= e[1][4] %></td>
+</tr>
+<%end%>
+</table>
+
+<br><br>
+<u><b>Residual Value</b></u>
+<br>
+  Total Second Stage Growth: <%=@total_second_stage_growth.round(2)%>%<br>
+  Capitization Rate: <%= @capitization_rate %>%<br>
+  Value at year Ten: $<%= @value_at_year_ten.round(2)%><br>
+  Present Value of Residual: $<%=@present_value_of_residual.round(2) %><br>
+  Market Value of Company: $<%=@market_value_of_company.round(2) %><br>
+  Margin of Saftey: $<%=@margin_of_saftey.round(2) %><br>
+  Margin of Saftey Percent: <%=@margin_of_saftey_percent.round(2) %>%<br><br>
+
+  <b>Max BUY Price: $</b><%= @buy_price.round(2) %><br>
+  Difference: <%= @difference.round(2) %>%<br><br><br><br>
 </div>

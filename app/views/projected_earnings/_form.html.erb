@@ -1,32 +1,33 @@
 
-<%= @stock.name    %><br>
-10 yr Growth:
-<%= @stock.ten_year_growth.round(2) %><br>
- Stock Price:
-<%= @stock.price %><br>
- PE:
-<%= @stock.pe %><br>
- projected EPS:<br>
-<%= @eps.round(2) %><br>
-Total projected earnings:<%= @total_projected_eps.round(2) %><br><br>
-10 Years Projected Earnings:<br>
-<ol>
-<% @projected_eps.each do |eps| %>
-<li> <%= eps.round(2) %> </li>
-<% end %>
-</ol>
+<h3> Projected Earnings for <%= @stock.name    %></h3><br>
+Estimated 10 yr growth rate:
+<%= @stock.ten_year_growth.round(2) %>%<br>
+ Current:<br>
+   Stock Price: $<%= @stock.price %><br>
+   PE:  <%= @stock.pe %><br>
+ projected EPS: $<%= @eps.round(2) %><br>
+Total projected earnings: $<%= @total_projected_eps.round(2) %><br>
+<br>
 
+<b>10 Years Forward Projected Earnings:</b><br>
+<table>
+<% @projected_eps.each_with_index do |eps, i| %>
+<%= %>
+<tr><td>Year <%= i+1 %>. </td>  <td> $<%= eps.round(2) %></td></tr>
+<% end %>
+<table>
+<br><br>
 Average PE: <%= @ave_pe.round(2) %><br>
 
-Plus Divs: <%= @plus_divs.round(2) %><br>
+Plus Divs:  $<%= @plus_divs.round(2) %><br>
 
-Expected Price <%= @expected_price.round(2) %> <br>
+Expected Price:  $<%= @expected_price.round(2) %> <br>
 
 Total Return: $<%= @total_return.round(2) %><br>
 
-Ten_year_total_return_for_15percent: $<%=  @ten_year_total_return_for_15percent.round(2) %><br><br>
+FV: Ten year total return for 15 percent: $<%=  @ten_year_total_return_for_15percent.round(2) %><br><br>
 
 <b>Highest price you can pay to get 15% return:</b> $
 <%= @highest_price_to_get15percent_return %><br>
 
-Dollar Difference: <%= @dollar_difference.round(2) %><br>
+Dollar Difference:  $<%= @dollar_difference.round(2) %><br><br><br><br>
