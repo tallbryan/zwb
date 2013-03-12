@@ -13,4 +13,25 @@
  */
 
 
+h2 {
+  font-size: 1.7em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: left;
+  font-weight: normal;
+  color: #999;
+}
 
+h1 {
+  font-size: 36px;
+  color: #00C;
+  text-align: left;
+}
+
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
