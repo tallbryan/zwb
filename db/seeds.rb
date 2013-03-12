@@ -1,4 +1,4 @@
-binding.pry
+
 def add_earnings_to_stock(stock, hist_earnings, hist_pe, hist_div, hist_sheq)
  @date = Date.current  
  @ten_years_ago = @date.years_ago(10).to_s.split(/-/)
