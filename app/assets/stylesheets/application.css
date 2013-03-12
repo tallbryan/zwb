@@ -26,9 +26,9 @@ h2 {
 
 
 
-td, th {
-  font-size: 1.5em !important; 
-  padding-right: 30px;
+ tr ,th {
+  font-size: 1em !important; 
+  padding-right: 20px;
 }
 
 h1 {
